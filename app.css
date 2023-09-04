@@ -4,3 +4,21 @@
     min-height: 200px;
     text-align: center;
 }
+
+.btn {
+    background-color: green;
+    color: white;
+    width: 150px;
+    height: 100px;
+}
+
+#result {
+    font-size: xx-large;
+}
+
+.restart {
+    background-color: green;
+    color: white;
+    width: 150px;
+    height: 100px;
+}
