@@ -14,11 +14,15 @@ function btnClickResponse() {
         result.innerHTML = secondMsg;
         return
     } if (result.innerHTML == secondMsg) {
+        
         result.appendChild(addition);
+
         btn.addEventListener('click', function() {
+
             result.innerHTML = 'You can stop now';
             result.setAttribute('style', 'color: red');
             btn.setAttribute('disabled', '');
+            btn.setAttribute('style', 'color: black');
             btn.innerText = 'No more clicky';
 
             let restart = document.createElement('button');
@@ -30,7 +34,6 @@ function btnClickResponse() {
         })
     }
 }
-
 
 btn.addEventListener('click', function(){
     btnClickResponse();
