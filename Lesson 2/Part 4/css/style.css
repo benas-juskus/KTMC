@@ -1,0 +1,35 @@
+header {
+    text-align: center;
+}
+nav {
+    padding: 2%;
+    border: solid grey 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.navbtn > a {
+    text-decoration: none;
+}
+.container {
+    padding: 5% 10% 0% 10%;
+}
+.card {
+    background-color: rgb(187, 208, 202);
+    padding: 10%;
+    border: solid black 1px;
+    border-radius: 2%;
+    margin-bottom: 5%;
+}
+table, th, td, tr {
+    border-collapse: collapse;
+    border: solid black 1px;
+    vertical-align: top;
+}
+th {
+    text-align: center;
+
+}
+td > img {
+    max-width: 80px;
+}
