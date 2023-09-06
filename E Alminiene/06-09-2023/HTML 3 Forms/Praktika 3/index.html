@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>"Pimp My Shoes" Contest Entry Form</h1>
+            <p>Want to trade in your old sneakers for a customer pair of Forcefields? Make a case for why your shoes have got to go and you may be one of ten lucky winners.</p>
+            <div>
+                <form action="#">
+                    <fieldset>
+                        <legend>Contest Entry Information:</legend>
+                        <div class="name">
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" name="name" required>
+                        </div>
+                        <div class="city">
+                            <label for="city">City:</label>
+                            <input id="city" type="text" name="city" required>
+                        </div>
+                        <div class="state">
+                            <label for="state">State:</label>
+                            <input id="state" type="text" name="state" required>
+                        </div>
+                        <div class="story">
+                            <label for="story">My shoes are SO old...</label>
+                            <textarea name="story" id="story" placeholder="(Your entry must be no more than 300 characters long.)" cols="30" rows="10"></textarea>
+                        </div>
+                    </fieldset>
+                    <H1>Design your custom Forcefields:</H1>
+                    <fieldset>
+                        <legend>Custom Shoe Design</legend>
+                        <fieldset>
+                            <legend>Color <i>(choose one)</i>:</legend>
+                            <div>
+                                <input id="red" type="radio" name="color">
+                                <label for="red">Red</label>
+                            </div>
+                            <div>                            
+                                <input id="blue" type="radio" name="color">
+                                <label for="blue">Blue</label>
+                            </div>
+                            <div>
+                                <input id="black" type="radio" name="color">
+                                <label for="black">Black</label>
+                            </div>
+                            <div>
+                                <input id="silver" type="radio" name="color">
+                                <label for="silver">Silver</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Features <i>(choose as many as you want):</i></legend>
+                            <div>
+                                <input id="sparkly_laces" type="checkbox" name="sparkly_laces">
+                                <label for="sparkly_laces">Sparkly laces</label>
+                            </div>
+                            <div>
+                                <input id="metallic_logo" type="checkbox" name="metallic_logo">
+                                <label for="metallic_logo">Metallic logo</label>
+                            </div>
+                            <div>
+                                <input id="light_up_heeels" type="checkbox" name="light_up_heeels">
+                                <label for="light_up_heeels">Light-up heels</label>
+                            </div>
+                            <div>
+                                <input id="mp3" type="checkbox" name="mp3">
+                                <label for="mp3">MP3-enabled</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Size</legend>
+                            <label for="size">Sizes reflect standard men's sizes</label>
+                            <select name="size" id="size">
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </fieldset>
+                    </fieldset>
+                    <div>
+                        <button type="submit">Pimp my shoes!</button>
+                    </div>
+                    <div>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

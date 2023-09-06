@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Jūsų kontaktai:</legend>
+                    <div class="name">
+                        <label for="name">Vardas</label>
+                        <input id="name" type="text">
+                    </div>
+                    <div class="name">
+                        <label for="surname">Pavardė</label>
+                        <input id="surname" type="text">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Jūsų atsiliepimas:</legend>
+                    <div class="source">
+                        <label for="source">Apie mus sužinojote iš:</label>
+                        <select name="source" id="source" name="source">
+                            <option value="google" selected>Google</option>
+                            <option value="friend">Draugo rekomendacija</option>
+                            <option value="advertisement">Reklama</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Ar apsilankysite dar kartą?</p>
+                    </div>
+                    <div class="response">
+                        <div>
+                            <input type="radio" value="Taip" id="yes" checked name="response">
+                            <label for="yes">Taip</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="Ne" id="no" name="response">
+                            <label for="no">Ne</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="galbut" id="maybe" name="response">
+                            <label for="maybe">Galbūt</label>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <label for="comment">Komentaras:</label>
+                        <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+                    </div>
+                    <div class="subscribe">
+                        <input id="subscribe" type="checkbox" name="subscribe" checked>
+                        <label for="subscribe">Užsakyti naujienlaiškį</label>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Pateikti atsakymą</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+table, input, button {
+    min-width: 100%;
+}
+.card {
+    border: 1px solid green;
+    padding: 25px;
+}

@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.name,
+.source,
+.response,
+.comment,
+.subscribe,
+.submit {
+    margin-bottom: 2%;
+}
+
+.container {
+    max-width: 90%;
+}
+
+.response,
+.comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.response {
+    flex-direction: row;
+}

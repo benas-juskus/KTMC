@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Užpildykite formą:</h1>
+            <h5>Visi laukai privalomi</h5>
+            <form action="#" method="POST">
+                <div class="name">
+                    <label for="name">Vardas (iš didžiosios raidės):</label>
+                    <input id="name" type="text" required placeholder="Vardas">
+                </div>
+                <div>
+                    <label for="telephone">Jūsų telefono numeris:</label>
+                    <input id="telephone" type="tel" name="telephone" placeholder="+370-xxx-xxxxx" required>
+                </div>
+                <div>
+                    <label for="email">El. pašto adresas:</label>
+                    <input id="email" type="email" name="email" placeholder="el.p.adresas" required>
+                </div>
+                <div>
+                    <label for="website">Jūsų mėgstamiausios internetinės svetainės adresas:</label>
+                    <input id="website" type="url" name="website" placeholder="url adresas" required>
+                </div>
+                <div>
+                    <label for="dob">Jūsų gimimo data:</label>
+                    <input id="dob" type="date" name="dob" required>
+                </div>
+                <div class="age">
+                    <label for="age">Jūsų amžius (18-65)</label>
+                    <input id="age" type="number" name="age" placeholder="nuo 18 iki 65 metų" min="18" max="65" required>
+                </div>
+                <div>
+                    <label for="postcode">Jūsų pašto kodas:</label>
+                    <input id="postcode" type="text" name="postcode" placeholder="XX-01234" required>
+                </div>
+                <div>
+                    <label for="color">Jūsų megstamiausia spalva:</label>
+                    <input id="color" type="color" name="color">
+                </div>
+                <button type="submit">Pateikti</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
