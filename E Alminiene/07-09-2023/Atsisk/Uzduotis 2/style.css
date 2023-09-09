@@ -1,0 +1,11 @@
+table, tr, td {
+    border: 1px black solid;
+    width: auto;
+    min-height: 80vh;
+}
+tr {
+    width: 300px;
+}
+img {
+    max-width: 100px;
+}

@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    min-width: 80%;
+}
+
+.card {
+    border: 1px solid rgb(123, 123, 243);
+    padding: 10% 10%;
+}
+
+form > div {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+}

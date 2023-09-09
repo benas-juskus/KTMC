@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzduotis 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Lankytojų apklausa</h1>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Vardas</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">E-Mail</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="age">Amžius</label>
+                    <select name="age" id="age">
+                        <option value="15">&lt;15</option>
+                        <option value="16-25">16-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36">36&gt;</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="occupation">Užsiėmimas</label>
+                    <select name="occupation" id="occupation">
+                        <option value="moksleivis">Moksleivis</option>
+                        <option value="studentas">Studentas</option>
+                        <option value="darbininkas">Darbininkas</option>
+                        <option value="tarnautojas">Tarnautojas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="comment">Jūsų atsiliepimai:</label>
+                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Siųsti</button>
+                    <button type="reset">Trinti</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
