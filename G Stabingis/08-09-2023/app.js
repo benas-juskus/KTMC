@@ -3,7 +3,8 @@ let fName = 'Benas',
     uzd1 = document.getElementById('uzd1'),
     result = `${fName} ${surName}`; //naudojamas literal string sujungti kintamuosius ir prideti tarpa.
 
-uzd1.innerText = result;
+// uzd1.innerText = result;
+
 
 // Uzduotis 2:
 
@@ -39,51 +40,67 @@ let contacts = [
     }
 ];
 
-// version 1:
 
-// for (let c of contacts) {
-//     let newRow = document.createElement('tr'),
-//         surnameDataCell = document.createElement('td'),
-//         nameDataCell = document.createElement('td'),
-//         telDataCell = document.createElement('td'),
-//         emailDataCell = document.createElement('td'),
-//         addressDataCell = document.createElement('td');
 
-//         nameDataCell.innerText = c.name;
-//         surnameDataCell.innerText = c.surname;
-//         telDataCell.innerText = c.tel;
-//         emailDataCell.innerText = c.email;
-//         addressDataCell.innerText = c.address;
+function generateContactList () {
+table.innerHTML = '';
 
-//     table.appendChild(newRow);
-//     newRow.appendChild(nameDataCell);
-//     newRow.appendChild(surnameDataCell);
-//     newRow.appendChild(telDataCell);
-//     newRow.appendChild(emailDataCell);
-//     newRow.appendChild(addressDataCell);
-// }
-
-// version 2:
-// Per contacts masyva eina loop'as 
-for (let contact of contacts) {
-    let newRow = document.createElement('tr'),
-        fields = [
-            'name',
-            'surname',
-            'tel',
-            'email',
-            'address'
-        ];
-
-    for (let field of fields) {
-        let cell = document.createElement('td');
-        cell.textContent = contact[field];
-        newRow.appendChild(cell);
-    }
-
-    table.appendChild(newRow);
+    for (let contact of contacts) {
+        let newRow = document.createElement('tr'),
+            fields = [
+                'name',
+                'surname',
+                'tel',
+                'email',
+                'address'
+            ];
     
+        for (let field of fields) {
+            let cell = document.createElement('td');
+            cell.textContent = contact[field];
+            newRow.appendChild(cell);
+        }
+    
+        table.appendChild(newRow);
+
+    };
 };
+
+function submitNewContact() {
+    let contact = {
+        name: '',
+        surname: '',
+        tel: null,
+        email: '',
+        address: ''
+    };
+
+    let fName = document.getElementById('name'),
+    surname = document.getElementById('surname'),
+    tel = document.getElementById('tel'),
+    email = document.getElementById('email'),
+    address = document.getElementById('address');
+    
+    contact.name = fName.value;
+    contact.surname = surname.value;
+    contact.tel = tel.value;
+    contact.email = email.value;
+    contact.address = address.value
+    contacts.push(contact);
+
+    generateContactList();
+
+    let inputFields = [fName, surname, tel, email, address];
+    for (let field of inputFields) {
+        field.value = '';
+    }
+}
+
+let submissionBtn = document.getElementById('submission');
+
+submissionBtn.addEventListener('click', () => submitNewContact());
+
+generateContactList();
 
 //Uzduotis 3:
 
