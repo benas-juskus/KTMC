@@ -2,8 +2,7 @@ let fName = 'Benas',
     surName = 'Juškus',
     uzd1 = document.getElementById('uzd1'),
     result = `${fName} ${surName}`; //naudojamas literal string sujungti kintamuosius ir prideti tarpa.
-
-// uzd1.innerText = result;
+uzd1.innerHTML = `<h1>${result}</h1>`;
 
 
 // Uzduotis 2:
@@ -11,30 +10,30 @@ let fName = 'Benas',
 let table = document.getElementById('table');
 let contacts = [
     {
-        name: 'Benas',
-        surname: 'Juskus',
-        tel: 861456789,
+        firstName: 'Benas',
+        lastName: 'Juskus',
+        telephone: 861456789,
         email: 'email@email.com',
         address: 'Gatves gatve 15, Klaipeda'
     },
     {
-        name: 'Pierce',
-        surname: 'Morgan',
-        tel: 864578965,
+        firstName: 'Pierce',
+        lastName: 'Morgan',
+        telephone: 864578965,
         email: 'p.morgan@email.com',
         address: 'Streets street 15, New York, NY'
     },
     {
-        name: 'Joe',
-        surname: 'Rogan',
-        tel: 864712548,
+        firstName: 'Joe',
+        lastName: 'Rogan',
+        telephone: 864712548,
         email: 'j.rogan@email.com',
         address: 'Avenue road, Austin, TX'
     },
     {
-        name: 'Marilyn',
-        surname: 'Monroe',
-        tel: 864445788,
+        firstName: 'Marilyn',
+        lastName: 'Monroe',
+        telephone: 864445788,
         email: 'mmonroe@email.com',
         address: 'Holywood rd. 458, Los Angeles, CA'
     }
@@ -48,9 +47,9 @@ table.innerHTML = '';
     for (let contact of contacts) {
         let newRow = document.createElement('tr'),
             fields = [
-                'name',
-                'surname',
-                'tel',
+                'firstName',
+                'lastName',
+                'telephone',
                 'email',
                 'address'
             ];
@@ -68,9 +67,9 @@ table.innerHTML = '';
 
 function submitNewContact() {
     let contact = {
-        name: '',
-        surname: '',
-        tel: null,
+        firstName: '',
+        lastName: '',
+        telephone: null,
         email: '',
         address: ''
     };
@@ -80,20 +79,28 @@ function submitNewContact() {
     tel = document.getElementById('tel'),
     email = document.getElementById('email'),
     address = document.getElementById('address');
-    
-    contact.name = fName.value;
-    contact.surname = surname.value;
-    contact.tel = tel.value;
-    contact.email = email.value;
-    contact.address = address.value
-    contacts.push(contact);
 
-    generateContactList();
+    if (fName.value && surname.value && tel.value && email.value && address.value) {
+        contact.firstName = fName.value;
+        contact.lastName = surname.value;
+        contact.telephone = tel.value;
+        contact.email = email.value;
+        contact.address = address.value
+        contacts.push(contact);
 
-    let inputFields = [fName, surname, tel, email, address];
-    for (let field of inputFields) {
-        field.value = '';
+        generateContactList();
+
+        let inputFields = [fName, surname, tel, email, address];
+        for (let field of inputFields) {
+            field.value = '';
+        }
+
+        return
     }
+
+    console.log('please eneter valid values');
+    
+    
 }
 
 let submissionBtn = document.getElementById('submission');
