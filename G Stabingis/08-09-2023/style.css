@@ -6,6 +6,17 @@
     margin-bottom: 10px;
 }
 
+#uzd1 {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#submission {
+    width: 200px;
+}
+
 table {
     border-collapse: collapse;
     min-width: 100%;
@@ -48,8 +59,4 @@ tr,
 td,
 th {
     border: 1px solid grey;
-}
-
-button {
-    max-width: 10%;
 }
