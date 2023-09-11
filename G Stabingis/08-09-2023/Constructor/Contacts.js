@@ -7,7 +7,7 @@ class Contacts {
         this.address = address;
     }
 
-    submitNewContact(contacts) {
+    createNewContact(firstName, lastName, telephone, email, address ) {
         let contact = {
             firstName: '',
             lastName: '',
@@ -15,19 +15,13 @@ class Contacts {
             email: '',
             address: ''
         };
-
-    let fName = document.getElementById('name'),
-        surname = document.getElementById('surname'),
-        tel = document.getElementById('tel'),
-        email = document.getElementById('email'),
-        address = document.getElementById('address');
         
-        contact.firstName = fName.value;
-        contact.lastName = surname.value;
-        contact.telephone = tel.value;
+        contact.firstName = firstName.value;
+        contact.lastName = lastName.value;
+        contact.telephone = telephone.value;
         contact.email = email.value;
         contact.address = address.value
-        contacts.push(contact);
-        console.log(contacts);
+
+        return contact;
     }
 }

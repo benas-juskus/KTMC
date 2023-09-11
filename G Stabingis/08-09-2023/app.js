@@ -1,12 +1,3 @@
-let fName = 'Benas',
-    surName = 'Juškus',
-    uzd1 = document.getElementById('uzd1'),
-    result = `${fName} ${surName}`; //naudojamas literal string sujungti kintamuosius ir prideti tarpa.
-uzd1.innerHTML = `<h1>${result}</h1>`;
-
-
-// Uzduotis 2:
-
 let table = document.getElementById('table');
 let contacts = [
     {
@@ -108,28 +99,3 @@ let submissionBtn = document.getElementById('submission');
 submissionBtn.addEventListener('click', () => submitNewContact());
 
 generateContactList();
-
-//Uzduotis 3:
-
-let item = {
-    id: 1,
-    name: 'MacBook Air M1',
-    type: 'Laptop',
-    price: '1199.00',
-    stock: 17,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem expedita beatae sequi accusamus, laborum voluptatum sed officia soluta fugiat voluptate ut nostrum veniam nesciunt consequatur blanditiis. Cupiditate, numquam nobis.',
-    image: 'https://istore.lt/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/p/apple-macbook-air-13-space-gray-m1.jpg'
-};
-
-let itemCard    = document.getElementById('item'),
-    itemName    = document.getElementById('itemName'),
-    itemImage   = document.getElementById('itemImage'),
-    description = document.getElementById('description'),
-    stock       = document.getElementById('stock'),
-    price       = document.getElementById('price');
-
-itemName.textContent = item.name;
-itemImage.setAttribute('src', item.image);
-description.textContent = item.description;
-stock.textContent = `In stock: ${item.stock}`;
-price.textContent = `${item.price} EUR`
