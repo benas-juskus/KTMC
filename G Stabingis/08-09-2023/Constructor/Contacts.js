@@ -1,4 +1,4 @@
-class Contacts {
+export class Contact {
     constructor(firstName, lastName, telephone, email, address) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -25,3 +25,7 @@ class Contacts {
         return contact;
     }
 }
+
+let bJuskus = new Contact(
+    'Benas', 'Juskus', '868908014', 'benas.juskus@gmail.com', 'Debreceno g. 12 - 7, Klaipeda'
+);

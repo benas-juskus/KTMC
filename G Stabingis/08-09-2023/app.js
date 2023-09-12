@@ -1,3 +1,5 @@
+import { Contact } from "/G Stabingis/08-09-2023/Constructor";
+
 let table = document.getElementById('table');
 let contacts = [
     {
