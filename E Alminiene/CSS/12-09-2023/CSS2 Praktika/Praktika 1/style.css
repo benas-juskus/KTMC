@@ -1,0 +1,19 @@
+.card {
+    background-color: rgb(225, 206, 174);
+    width: 250px;
+    height: 200px;
+    padding: 2%;
+    font-size: x-large;
+}
+h3 {
+    color: rgb(151, 12, 12);
+}
+ul {
+    list-style: none;
+}
+li {
+    text-decoration: underline dotted grey;
+}
+li::before {
+    content: '☎ ';
+}

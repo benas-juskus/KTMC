@@ -1,0 +1,6 @@
+li:nth-child(4n-1) {
+    color: orange;
+}
+li:nth-child(3n-1):hover {
+    color: rgb(252, 118, 140);
+}

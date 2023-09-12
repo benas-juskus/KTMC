@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+a[href*="cv"]::before {
+    content: '♛';
+}
+a[href*="darb"]::after {
+    content: '♞';
+}

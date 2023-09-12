@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(62, 61, 61);
+    color: white;
+}
+
+header h1 {
+    padding: 2% 2% 0 2%;
+    margin-top: 0;
+}
+
+h1 span {
+    font-size: 50px;
+    color: orange;
+}
+
+nav ul {
+    padding-left: 0;
+    background-color: rgb(143, 143, 143);
+    display: flex;
+    flex-direction: row;
+}
+
+nav li {
+    list-style: none;
+    padding: 2%;
+}
+
+header nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+article {
+    max-width: 49%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+}
+
+article div {
+    max-width: 49%;
+}
+
+article > a {
+    min-width: 100%;
+    display: block;
+    text-decoration: none;
+    color: orange;
+    text-transform: uppercase;
+}
+
+.content {
+    max-width: 49%;
+}
+
+figure {
+    margin-left: 0;
+    max-width: 47%;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: right;
+    color: orange;
+}
+
+article div p span {
+    letter-spacing: 10px;
+    color: orange;
+}
+
+aside {
+    background-color: rgb(62, 61, 61);
+    color: rgb(239, 239, 239);
+}
+
+aside nav li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+aside nav ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+
+aside a {
+    text-decoration: none;
+    color: orange;
+}
+
+aside h4 {
+    margin: 0;
+    padding: 2% 0;
+    text-align: center;
+    font-size: large;
+    letter-spacing: 25px;
+    text-transform: uppercase;
+}
+
+footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(62, 61, 61);
+    color: white;
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    padding: 10px 10px 25px 10px;
+}

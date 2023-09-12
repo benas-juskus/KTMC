@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(160, 159, 159);
+    margin: 5% 5%;
+}
+h1 {
+    color: purple;
+}
+.hello {
+    background-color: white;
+}
+#special {
+    border: solid 1px blue;
+}
+h2, h3 {
+    color: orange;
+}
+#special2 > span {
+    border: red 1px solid;
+}
+div li {
+    color: blue;
+}
+div li li {
+    color: purple;
+}
+div + p {
+    font-size: small;
+}
+div ul{
+    color: purple;
+}
+li {
+    color: black;
+}
+li li {
+    color: black;
+}
+
+p {
+    font-size: small;
+}
+div p {
+    font-size: medium;
+}
