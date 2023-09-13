@@ -1,0 +1,33 @@
+.container {
+    border: 1px solid grey;
+    padding: 10%;
+}
+header {
+    text-align: center;
+}
+li {
+    padding: 5px;
+    border: 1px solid black;
+    display: inline-block;
+    list-style: none;
+}
+a {
+    cursor: default;
+    color: black;
+    text-decoration: none;
+}
+.navBtn {
+    background-color: grey;
+}
+.navBtn > *:hover {
+    cursor: pointer;
+}
+.navBtnActivated {
+    background-color: aliceblue;
+}
+.navBtnActivated:hover {
+    cursor: auto;
+}
+.navBtn:active {
+    background-color: rgb(212, 209, 24);
+}

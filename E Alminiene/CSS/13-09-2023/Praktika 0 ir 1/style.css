@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.card {
+    width: 60%;
+    text-align: center;
+    border: 5px double white;
+    color: white;
+    padding: 5% 0;
+    margin-top: 10%;
+}
+
+.cardContent {
+    padding: 0 20%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cardContent > * {
+    margin: 0 0 2%;
+}
+
+.crown {
+    font-size: 100px;
+    margin: 0;
+}

@@ -1,0 +1,6 @@
+.card {
+    padding: 2%;
+    max-width: 500px;
+    border: 25px solid;
+    border-image: url('https://picsum.photos/550/550') 30 stretch;
+}

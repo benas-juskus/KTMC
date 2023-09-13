@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 10%;
+    box-shadow: 0 0 20px black;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+img {
+    border-radius: 50%;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -90px;
+}
+
+figure > div {
+    display: flex;
+    justify-content: center;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+p {
+    text-align: center;
+    padding: 0 5%;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.rating p {
+    color: rgb(210, 180, 10);
+    font-size: xx-large;
+    letter-spacing: 30px;
+}

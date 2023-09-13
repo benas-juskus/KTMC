@@ -1,0 +1,9 @@
+.card {
+    background-color: rgb(222, 163, 0);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    max-width: 500px;
+    border: 25px solid;
+    border-image: url('https://picsum.photos/550/550') 100  round;
+}
