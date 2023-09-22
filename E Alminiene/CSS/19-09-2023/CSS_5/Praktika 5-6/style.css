@@ -1,0 +1,26 @@
+.container {
+    padding: 5px 10px;
+    width: 900px;
+    height: 300px;
+    text-align: center;
+    background-color: grey;
+}
+p {
+    font-size: small;
+}
+.box {
+    margin-top: 8px;
+    padding: 2%;
+    display:inline-block;
+    background-color: black;
+    color: rgb(169, 169, 169);
+    height: 100px;
+    width: 250px;
+}
+
+.one, .four {
+    float: left;
+}
+.three, .six { 
+    float: right;
+}

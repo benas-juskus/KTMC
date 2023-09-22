@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Užduotys 1</title>
+</head>
+<body>
+    <h1>Užduotis 1</h1>
+    <p id="uzd1"></p>
+    
+    <h1>Užduotis 2</h1>
+    <p id="uzd2"></p>
+    
+    <script>
+        // Užduotis 1
+        let rezultatas1 = "";
+        let vardas = "Petras";
+        let pavarde = "Petraitis";
+
+        // rezultatas1 = vardas + " " + pavarde;
+        rezultatas1 = vardas;
+        rezultatas1 += " ";
+        rezultatas1 += pavarde;
+
+        document.getElementById("uzd1").innerHTML = rezultatas1;
+        
+        // Užduotis 1
+        let rezultatas2 = "";
+        vardas = "Petras";
+        pavarde = "Petraitis";
+        let tel = "370 612 12345";
+        let el_pastas = "jonas.jonaiti@gmail.com";
+        let adresas = "Jono g. 1, Klaipėda";
+        let foto = "https://www.pngkey.com/png/detail/765-7656718_avatar-blank-person.png";
+        
+        
+        // generavimas
+        rezultatas2 = "<b style=\"text-transform:uppercase;\">" + vardas + " " + pavarde + "</b>";
+        
+        rezultatas2 += "<br><img src=\"" + foto + "\" style=\"max-width: 300px;\">";
+        // rezultatas2 += "<br><img src=\"\" id=\"foto2\" style=\"max-width: 300px;\">";
+        
+        rezultatas2 += "<br>tel.: <b>" + tel + "</b>";
+        rezultatas2 += "<br>el. paštas: <b>"
+        rezultatas2 += el_pastas;
+        rezultatas2 += "</b>";
+        rezultatas2 += "<br>adresas: <b>" + adresas + "</b>";
+        
+        // išvedimas
+        document.getElementById("uzd2").innerHTML = rezultatas2;
+        // document.getElementById("foto2").setAttribute("src", foto);
+        
+
+
+
+    </script>
+</body>
+</html>

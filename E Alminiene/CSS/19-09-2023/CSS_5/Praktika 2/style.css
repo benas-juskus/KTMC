@@ -1,0 +1,18 @@
+.parent {
+    margin: 0;
+    height: 200px;
+    width: 300px;
+    background-image: url('https://picsum.photos/300/200');
+}
+.element {
+    margin: 0;
+    background-color: rgba(0, 128, 0, 0.587);
+    position: absolute;
+    top: 150px;
+    width: 300px;
+    height: 58px;
+}
+p {
+    color: rgb(214, 214, 214);
+    padding: 2%;
+}

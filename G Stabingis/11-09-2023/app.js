@@ -1,18 +1,22 @@
-let gera_nuotaika = true,
-    hour = 24;
-    let greeting;
+const hour = new Date().getHours(); //Retrieve current hour.
+let greeting; //Declare greeting variable with no defined value.
 
-if (gera_nuotaika) {
-    if (hour <= 9) {
-        greeting = "Good morning";
-    } else if (hour <= 19) {
-        greeting = "Good day";
-    } else if (hour <= 23) {
-        greeting = "Good evening";
-    }   
-    console.log(greeting);
-} else {
-greeting = "Hello";
-}
+let goodMood = true; //Declare the status of mood in boolean.
 
-console.log(greeting);
+//Following block of code checks the 
+//status of the mood and the depending 
+//on the hour of the day provides a value to the greeting.
+
+switch (goodMood) {
+    case true:
+      hour <= 11 ? greeting = "Good morning" 
+      : (hour <= 19 ? greeting = "Good day"
+        : (hour <= 23 ? greeting = "Good evening" 
+          : greeting = "Hello"));
+      break;
+    default:
+      greeting = "Hello";
+      break;
+  }
+
+document.getElementById("demo").innerHTML = greeting;

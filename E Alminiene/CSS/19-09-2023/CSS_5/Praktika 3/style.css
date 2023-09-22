@@ -1,0 +1,58 @@
+.container {
+    padding: 2%;
+    background-color: grey;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.item {
+    height: 49%;
+    width: 30%;
+}
+img {
+    border: solid black;
+    height: 150px;
+    width: 150px;
+}
+p {
+    text-align: center;
+    padding: 4px;
+}
+
+.speech-bubble {
+    border: rgb(135, 135, 135) solid;
+	position: relative;
+	background: #d7d9da;
+	border-radius: 35%;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #d7d9da;
+	border-bottom: 0;
+	margin-left: -20px;
+	margin-bottom: -20px;
+}
+
+.first-bubble {
+    top: -150px;
+    left: -30px;
+}
+.second-bubble {
+    top: -170px;
+    left: -40px;
+}
+.third-bubble {
+    top: -180px;
+    left: -30px;
+}

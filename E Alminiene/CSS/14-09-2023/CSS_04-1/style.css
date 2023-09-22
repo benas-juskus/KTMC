@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container{
+    margin-top: 10%;
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px red;
+    height: 200px;
+    width: 500px;
+    background-image: url('images/water-2748695_640.png'),url('images/png-2702691_640.png'), url('https://picsum.photos/500/200');
+    background-position: center left, center right;
+    background-repeat: no-repeat;
+}

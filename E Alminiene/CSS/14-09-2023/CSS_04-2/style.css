@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+article {
+  background-color: white;
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+  background-image: 
+    -webkit-linear-gradient(rgba(0, 0, 0, 0.217), white, rgba(0, 0, 0, 0.276)), 
+    url('top-image.png'), 
+    url('bottom-image.png');
+  background-position: center, top center, bottom center;
+  background-repeat: no-repeat;
+  border-top: red solid 1mm;
+  border-bottom: red solid 1mm;
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 50%;
+  background-image: url('logo.png');
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  /* box-shadow: 5px 5px 20px rgb(0, 0, 0); */
+}
+
+/* Your CSS below here */
+
+
+/*
+The main letter
+
+    1. Apply the CSS to the HTML.
+    2. Add a background declaration to the letter that:
+        Fixes the top image to the top of the letter
+        Fixes the the bottom image to the bottom of the letter
+        Adds a semi-transparent gradient over the top of both of the previous backgrounds that gives the letter a bit of texture. Make it slightly dark right near the top and bottom, but completely transparent for a large part of the center.
+    3. Add another background declaration that just adds the top image to the top of the letter, as a fallback for browsers that don't support the previous declaration.
+    4. Add a white background color to the letter.
+    Add a 1mm top and bottom solid border to the letter, in a color that is inkeeping with the rest of the color scheme.
+
+The logo
+
+    1. To the <h1>, add the logo as a background image.
+    2. Add a filter to the logo to give it a subtle drop shadow.
+    3. Now comment out the filter and implement the drop shadow in a different (slightly more cross-browser compatible) way, which still follows the shape of the round image.
+*/

@@ -1,0 +1,17 @@
+.container {
+    margin: 10px;
+}
+figure {
+    margin: 0 10px 0 0;
+    float: left;
+}
+p {
+    width: 300px;
+}
+.text {
+    display: inline-block;
+}
+.no-float {
+    margin: 0;
+    clear: both;
+}

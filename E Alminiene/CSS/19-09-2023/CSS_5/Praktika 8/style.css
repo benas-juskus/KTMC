@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    background-color: rgb(214, 214, 214);
+    padding: 2%;
+}
+p {
+    margin: 0 0 0 5px;
+    font-size: small;
+}
+h3 {
+    margin: 0 0 0 5px;
+}
+section {
+    margin: 0;
+}
+figure {
+    margin: 0;
+}
+aside {
+    margin: 0 0 0 10px;
+}
+aside article {
+    margin: 0;
+    display: flex;
+}
