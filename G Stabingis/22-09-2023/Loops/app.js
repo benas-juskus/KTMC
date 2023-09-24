@@ -7,14 +7,14 @@ for (let i = 0; i < 12; i++) { //Paleidžiame ciklą, jo pagalba sugeneruosime m
     const date = new Date(1, i, 1);//Sukuriame kintamąjį, kuris gauna nurodytos datos informaciją. Su kiekviena iteracija, ciklas keičia mėnesio numerį, pagal atitinkamą "i" kintamojo skaičių (metai ir diena šiuo atveju mums nerūpi, tad lieka nekintantys.)
     const month = date.toLocaleString('lt-LT', { month: 'long' });//Mėnesio pavadinimą išgauname pagal atitinkamą Date objekto grąžintą skaičių, ir tada naudojant toLocaleString() metodą, nurodome kad norime gauti ilgąjį mėnesio pavadinimą Lietuvių kalba.
     monthName.push(month);//Gautąjį pavadinimą įdedame į mėnesio pavadinimų masyvą.
-}
+};
 
 for (let month of monthName) {//Ciklo pagalba einame per visus menesio pavadinimus masyve.
     let listItem = document.createElement('li');//Sukuriame naują elementą, kuriame bus vaizduojamas mėnesio pavadinimas.
         listItem.textContent = month;//Sukurtam elementui priskiriame mėnesio pavadinimo informaciją vidinio teksto pavidalu.
 
     monthList.appendChild(listItem);//Naująjį užpildytą elementą įdedame į tėvinį elementą kuriame bus vaizduojami visi mėnesio pavadinimai.
-}
+};
 
 //Uzduotis 2
 
@@ -40,7 +40,7 @@ for (let i = 1; i <= 100; i++) { //Paleidžiame ciklą, kurio metu su kiekviena 
         let newLi = document.createElement('li');// Jei salyga atitinka, skaičius įkeliamas į naujai sukurtą elementą.
         newLi.textContent = i;
         taskThreeDisplay.appendChild(newLi);
-    }
+    };
 };
 
 //Uzduotis 4
@@ -68,7 +68,7 @@ for (let a = 1; a < 10; a++) {//Šis ciklas generuos masyvus kiekvienam skaičiu
 
     for (let i = 1; i < 10; i++) { //Šis ciklas generuos skaičių variacijas, kurios bus dedamos į masyvą.
         resultTaskFive.push(`${a} * ${i} = ${a * i}`);
-    }
+    };
 
     resultsTaskFiveTotal.push(resultTaskFive); //Kiekvienos iteracijos sugeneruotą masyvą vienam skaičiui, keliame į visų rezultatų masyvą.
 
@@ -85,7 +85,7 @@ for (let data of resultsTaskFiveTotal) { //Šis ciklas pereis per visus masyvus 
             newPar.textContent = line;
 
         newDiv.appendChild(newPar);//Tuomet įkeliami į tėvinį elementą.
-    }
+    };
     taskFiveDisplay.appendChild(newDiv); //Tada įkeliami į elementą kur bus vaizduojama visa daugybos lentelė.
 };
 
@@ -104,10 +104,10 @@ for (let i = 0; i < 8; i++) {//Paleidžiame ciklą kuris didės po vieną skaič
             newCell.classList.add('black');//Priklausomai nuo to, sukurtam kvadratui pritaikoma (arba ne) klasė "black".
         } else if (i % 2 != 0 && cell % 2 != 0) {
             newCell.classList.add('black');//Kita sąlyga daro tą patį tik yra pritaikyta priešingai.
-        }
+        };
 
         newRow.appendChild(newCell); //Kvadratai įdedami į naujas eilutes.
-    }
+    };
     chessBoard.appendChild(newRow); //Eilutės įdedamos į table elementą.
 
     //Priklausomai nuo to kurie <td> elementai turi nurodytą .black klasę, CSS aprašyti stiliai pritaiko juodą foną atitinkamiems kvadratukams.
@@ -153,7 +153,7 @@ for (let country in countries) { //Paleidžiame ciklą, kuriuo einame per visus 
 
     countryTable.appendChild(newRow);
     indexValue += 1;//Indekso vertė pakeliama 1
-}
+};
 
 //Uzduotis 8
 
@@ -184,9 +184,9 @@ for (let country in countries2) { //Paleidžiame ciklą, kuriuo einame per visus
         countryName = document.createElement('td'),// Stulpelio elementas šalies pavadinimui
         capitalName = document.createElement('td');// Stulpelio elementas sostinei
 
-        countryCode.textContent = country.toUpperCase();//Priskiriame šalies kodo reikšmę, ir naudojame metodą, kurias padaro visas raides didžiosiomis.
-        countryName.textContent = countries2[country][0];//Priskiriamos kitos reikšmės.
-        capitalName.textContent = countries2[country][1];
+    countryCode.textContent = country.toUpperCase();//Priskiriame šalies kodo reikšmę, ir naudojame metodą, kurias padaro visas raides didžiosiomis.
+    countryName.textContent = countries2[country][0];//Priskiriamos kitos reikšmės.
+    capitalName.textContent = countries2[country][1];
 
         
     newRow.appendChild(countryCode);// Elementai prisegami prie reikiamų elementų.
