@@ -10,8 +10,13 @@ for (let i = 0; i < 12; i++) { //Paleidžiame ciklą, jo pagalba sugeneruosime m
 };
 
 for (let month of monthName) {//Ciklo pagalba einame per visus menesio pavadinimus masyve.
+
+    let smallLetters = month.slice(1);//Pasirenkame raides, kurios liks mažosiomis.
+    let capFirstLetter = month[0].toUpperCase();//Pasirenkame pirmąją raidę, kuri bus didžioji.
+        capitalizedName = capFirstLetter.concat(smallLetters);//Sujungiame į naują žodį, kuris prasidės didžiaja raide.
+
     let listItem = document.createElement('li');//Sukuriame naują elementą, kuriame bus vaizduojamas mėnesio pavadinimas.
-        listItem.textContent = month;//Sukurtam elementui priskiriame mėnesio pavadinimo informaciją vidinio teksto pavidalu.
+        listItem.textContent = capitalizedName;//Sukurtam elementui priskiriame mėnesio pavadinimo informaciją vidinio teksto pavidalu.
 
     monthList.appendChild(listItem);//Naująjį užpildytą elementą įdedame į tėvinį elementą kuriame bus vaizduojami visi mėnesio pavadinimai.
 };
@@ -60,7 +65,7 @@ taskFourDisplay.textContent = `${numberForFactorial}! = ${sequenceDisplay.join('
 
 //Uzduotis 5
 
-let resultsTaskFiveTotal = []; //Masyvas kuriame laikysime visus sugeneruotus rezultatus.
+let resultsTaskFiveTotal1 = []; //Masyvas kuriame laikysime visus sugeneruotus rezultatus.
 
 for (let a = 1; a < 10; a++) {//Šis ciklas generuos masyvus kiekvienam skaičiui.
     
@@ -70,13 +75,13 @@ for (let a = 1; a < 10; a++) {//Šis ciklas generuos masyvus kiekvienam skaičiu
         resultTaskFive.push(`${a} * ${i} = ${a * i}`);
     };
 
-    resultsTaskFiveTotal.push(resultTaskFive); //Kiekvienos iteracijos sugeneruotą masyvą vienam skaičiui, keliame į visų rezultatų masyvą.
-
+    resultsTaskFiveTotal1.push(resultTaskFive); //Kiekvienos iteracijos sugeneruotą masyvą vienam skaičiui, keliame į visų rezultatų masyvą.
 };
 
-let taskFiveDisplay = document.getElementById('task5'); //Elementas kuriame vaizduosime informaciją.
 
-for (let data of resultsTaskFiveTotal) { //Šis ciklas pereis per visus masyvus rezultato vidujue
+let taskFiveDisplay1 = document.getElementById('task5v1'); //Elementas kuriame vaizduosime informaciją.
+
+for (let data of resultsTaskFiveTotal1) { //Šis ciklas pereis per visus masyvus rezultato vidujue
 
     const newDiv = document.createElement('div'); //Sukuriamas elementas kuriame bus laikomi vieno skaičiaus daugybos variantai.
 
@@ -86,7 +91,7 @@ for (let data of resultsTaskFiveTotal) { //Šis ciklas pereis per visus masyvus 
 
         newDiv.appendChild(newPar);//Tuomet įkeliami į tėvinį elementą.
     };
-    taskFiveDisplay.appendChild(newDiv); //Tada įkeliami į elementą kur bus vaizduojama visa daugybos lentelė.
+    taskFiveDisplay1.appendChild(newDiv); //Tada įkeliami į elementą kur bus vaizduojama visa daugybos lentelė.
 };
 
 
@@ -133,16 +138,19 @@ const countries = {
   };
 
 
+let countryList = document.getElementById('list');//Pasirenkame elementą kuriame bus vaizduojamas sąrašas.
 let countryTable = document.getElementById('task7'); //Pasirenkame elementą kuriame bus vaizduojama lentelė.
 let indexValue = 1; //Sukuriame kintamąjį lentelės eilučių indeksavimui.
 
 for (let country in countries) { //Paleidžiame ciklą, kuriuo einame per visus raktus ir vertes objekte.
 
-    let newRow = document.createElement('tr'), //Sukuriame naują eilutę informacijai atvaizduoti.
+    let newLi = document.createElement('li'),//Sukuriame naują li elementą paprastam sąrašui.
+        newRow = document.createElement('tr'), //Sukuriame naują eilutę informacijai atvaizduoti.
         index = document.createElement('td'), // Stulpelio elementas indeksui
         countryName = document.createElement('td'),// Stulpelio elementas šalies pavadinimui
         capitalName = document.createElement('td');// Stulpelio elementas sostinei
 
+    newLi.textContent = `${country}: ${countries[country]}`;//Apipavidaliname, kaip informacija bus vaizduojama sąrašo eilutėse.
     index.textContent = indexValue; //Inekso reikšmė priskiriama pagal indekso kintamojo nurodytą reikšmę.
     countryName.textContent = country;// Priskiriamos kitos reikšmės.
     capitalName.textContent = countries[country];
@@ -151,6 +159,7 @@ for (let country in countries) { //Paleidžiame ciklą, kuriuo einame per visus 
     newRow.appendChild(countryName);
     newRow.appendChild(capitalName);
 
+    countryList.appendChild(newLi);
     countryTable.appendChild(newRow);
     indexValue += 1;//Indekso vertė pakeliama 1
 };

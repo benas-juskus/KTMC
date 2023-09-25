@@ -18,20 +18,24 @@ body {
     text-align: left;
     list-style: square;
 }
-#task5 {
+#task5v1 {
     margin-top: 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
-#task5 > div {
+#task5v1 > div {
     padding: 10px 0;
     border: solid 1px black;
     width: 30%
 }
-#task5 p {
+#task5v2 p, #task5v1 p {
     margin:0;
+}
+#task5v2 td {
+    width: 150px;
+    border:solid 1px black;
 }
 table {
     margin: 5% 5%;
@@ -44,6 +48,15 @@ table {
 }
 .black {
     background-color: black;
+}
+#list {
+    text-align: left;
+    display: inline-block;
+    width: 49%;
+}
+#list + table {
+    display: inline-block;
+    margin: 0;
 }
 
 #task7 td, #task8 td {
