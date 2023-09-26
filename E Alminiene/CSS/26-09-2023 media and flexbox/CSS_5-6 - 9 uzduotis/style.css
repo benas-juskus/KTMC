@@ -1,0 +1,276 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+
+/* General setup */
+body, main {
+    margin: 0;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    margin: 0;
+    background-image: url('image/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo {
+    float: left;
+    margin: 0;
+    padding: 2% 0 0 10%;
+    font-family: 'Kurale', serif;
+    font-style: italic;
+    color: rgb(236, 236, 236);
+}
+nav {
+    float: right;
+    padding: 0 2% 0 0;
+}
+nav + * {
+    clear: both;
+}
+.logo, nav {
+    display: inline-block;
+}
+nav li a {
+    font-family: 'Khand', sans-serif;
+    font-weight: 800;
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+}
+nav li a:hover {
+    color: black;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 5px;
+}
+.central-header {
+    padding: 10% 0 5% 0;
+}
+.large-white-central-header {
+    margin: -50px 0 -20px 0;
+    padding: 0;
+    color: rgb(236, 236, 236);
+    font-family: 'Fasthand', cursive;
+    font-weight: 100;
+    font-size: 100px;
+}
+.white-header-surround-text {
+    color: rgb(236, 236, 236);
+    margin: 0;
+    padding: 0;
+    font-family: 'Khand', sans-serif;
+}
+button {
+    font-family: 'Khand', sans-serif;
+    color: white;
+    border: none;
+    background-color: rgb(31, 179, 31);
+    border-radius: 15px;
+    padding: 5px 5%;
+    margin-top: 10px;
+}
+
+/* Welcome section */
+.welcome {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.large-green-header{
+    font-family: 'Fasthand', cursive;
+    color: rgb(0, 62, 0);
+    font-size: 60px;
+}
+.welcome figure img {
+    border-radius: 50%;
+}
+.welcome figure p {
+    font-size: small;
+}
+.central-figure {
+    flex-direction: column;
+    justify-content: space-around;
+}
+.central-figure div {
+    background-image: url('image/roundel.jpg');
+    width: 350px;
+    height: 350px;
+    background-size:cover;
+    border-radius: 50%;
+    background-clip: content-box;
+}
+.assortiment {
+    max-width: 750px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.assortiment p, .assortiment h3 {
+    color: grey;
+    font-family: 'Khand', sans-serif;
+    width: 150px;
+}
+
+/* Eat better section */
+
+.better {
+    display:flex;
+    justify-content: center;
+    background-image: url('image/eatbetter.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5% 0 5% 0;
+    border: solid rgb(86, 86, 86) -10px;
+}
+.better h2 {
+    color: rgb(1, 169, 1);
+    font-family: 'Khand', sans-serif;
+    font-weight: 800;
+}
+.better div {
+    padding-bottom: 2%;
+    width: 80%;
+    border: 3px solid rgb(221, 221, 221);
+}
+
+/* Product section */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product ul {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+}
+.product li {
+    display: inline-block;
+    font-family: 'Khand', sans-serif;
+    font-weight: 600;
+    padding: 0 2% 0 2%;
+}
+.product li:hover {
+    color: rgb(31, 179, 31);
+    border-bottom: 2px solid green;
+}
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 750px;
+}
+.products > div {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.151);
+    margin-bottom: 20px;
+}
+.products > div:hover {
+    box-shadow: 0 0 10px 3px rgba(55, 165, 55, 0.151);
+    margin-bottom: 10px;
+}
+.products > div:hover .prod-info {
+    background-color: rgb(61, 202, 61);
+}
+
+.products img {
+    width: 200px;
+    height: 200px;
+}
+.prod-info {
+    background-color: rgb(246, 246, 246);
+    justify-content: center;
+    padding: 5px;
+    font-family: 'Khand', sans-serif;
+}
+.prod-info h6 {
+    margin: 0;
+    color: rgb(9, 92, 9);
+}
+.prod-info p {
+    color: rgb(93, 156, 0);
+}
+.prod-info p::before {
+    content: '€';
+}
+.actions img {
+    display: none;
+}
+.products > div:hover .actions img {
+    display: inline-block;
+    margin: 0 5px 5px 5px;
+    width: 10px;
+    height:10px;
+}
+.clear-button {
+    margin-bottom: 5%;
+    color: rgba(128, 128, 128, 0.338);
+    background-color: white;
+    border: solid rgba(128, 128, 128, 0.342) 1px;
+}
+
+/* Deal Today section */
+
+.deal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 2%;
+    background-color: rgb(242, 242, 242);
+}
+.deal-box {
+    max-width: 750px;
+}
+.deal-content {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2%;
+    
+}
+.deal figure {
+    max-width: 49%;
+}
+.deal-info {
+    text-align: left;
+    font-family: 'Khand', sans-serif;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
+.gallery img {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.231);
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+.btn-gallery {
+    position: relative;
+    top: 35%;
+    font-weight: 800;
+    padding: 0 1px 0 0;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    
+}
+.active {
+    color: black;
+    background-color: rgb(204, 204, 204);
+}
+.inactive {
+    border: solid 1px grey;
+    color: rgb(188, 188, 188);
+    background-color: rgb(243, 243, 243);
+}

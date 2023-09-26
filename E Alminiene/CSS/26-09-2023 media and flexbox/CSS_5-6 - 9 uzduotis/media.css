@@ -1,0 +1,89 @@
+@media screen and (max-width: 780px) {
+    .assortiment {
+        flex-direction: column;
+        width: 100%;
+    }
+    .left, .right, .central-figure {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+    }
+    .products > div {
+        width: 48%;
+    }
+    .products > div > img {
+        width: 100%;
+        height: auto;
+    }
+    .deal-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .deal-box {
+        width: 100%;
+    }
+    .deal-content figure {
+        max-width: 100%;
+    }
+    .deal-content figure > img {
+        width: 100%;
+    }
+    .deal-info {
+        margin-left: 5%;
+    }
+    .deal-info button{
+        margin-left: 38%;
+    }
+    .gallery div:nth-child(even) {
+        display: none;
+    }
+    .gallery img {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        padding-left: 0;
+    }
+    nav ul {
+        padding-left: 0;
+    }
+    nav ul li {
+        display: block;
+        list-style: none;
+        padding: 2% 0;
+    }
+    .central-header {
+        padding: 1% 0 5% 0;
+    }
+    .left, .right, .central-figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+    }
+    .assortiment figure > img {
+        width: 60%;
+    }
+    .assortiment figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .central-figure {
+        align-items: center;
+    }
+    .products > div {
+        width: 100%;
+    }
+}
