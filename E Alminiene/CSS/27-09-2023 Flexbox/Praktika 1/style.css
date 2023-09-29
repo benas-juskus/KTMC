@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+header, .divider, footer {
+    width: 100%;
+    padding: 1% 2%;
+    text-align: center;
+    background-color: rgb(56, 56, 127);
+    color: white;
+}
+#box12, #box21 {
+    background-color: rgb(250, 116, 138);
+}
+#box13, #box22 {
+    background-color: orange;
+}
+#box11 {
+    background-color: rgb(89, 44, 89);
+}
+#box12, #box21, #box13, #box22, #box11, #box14, #box23 {
+    height: 200px;
+    flex-grow: 1;
+}

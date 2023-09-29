@@ -1,0 +1,41 @@
+.container {
+
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(3, 1fr);
+    grid-row: auto;
+    grid-gap: 10px 10px;
+}
+.container  * {
+    border-radius: 4px;
+}
+header, footer {
+    padding-left: 2%;
+    background-color: #415B76;
+    color: white;
+    grid-column: span 3;
+}
+article, aside {
+    color: #415B76;
+}
+article {
+    padding: 2% 2%;
+    background-color: rgb(186, 186, 186);
+    grid-column: span 2;
+    grid-row: span 4;
+    order: 2;
+}
+aside {
+    border: solid #415B76 1px;
+    padding: 2% 2%;
+    background-color: rgb(226, 226, 226);
+    grid-row: span 4;
+}
+#first {
+    order: 1
+}
+#second {
+    order: 3;
+}
+footer {
+    order: 4
+}

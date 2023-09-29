@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+}
+.container1 div, .container2 div {
+    background-color: pink;
+    color: white;
+    font-size: xx-large;
+    border-radius: 15px;
+    line-height: 150px;
+}
+.container1, .container2 {
+    width: 80%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px 10px;
+    grid-auto-rows: minmax(80px, 150px);
+}
+#a {
+    order: 2;
+}
+#b {
+    order: 5;
+}
+#c {
+    order: 6;
+}
+#d {
+    order: 1;
+}
+#e {
+    order: 4;
+}
+#f {
+    order: 3;
+}

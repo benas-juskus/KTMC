@@ -1,0 +1,36 @@
+.container {
+    border: solid black 1px;
+    padding: 1% 1%;
+    display: flex;
+    justify-content: space-around;
+}
+.card {
+    width: 200px;
+    margin: 5px 5px;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.119);
+}
+figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+figcaption {
+    padding: 0 3%;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+button {
+    border: none;
+    color: white;
+    background-color: grey;
+    width: 100%;
+    padding: 5%;
+}
