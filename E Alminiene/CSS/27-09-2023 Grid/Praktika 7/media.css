@@ -1,0 +1,82 @@
+@media screen and (max-width: 991.98px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        margin-top: 2%;
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+
+
+@media screen and (max-width: 767.98px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+    }
+    .logo, nav {
+        max-width: 767px;
+        width: 100%;
+    }
+    .section-left {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(250px, 300px);
+        grid-auto-flow: dense;
+    }
+    .section-right {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(250px, 300px);
+        grid-auto-flow: dense;
+    }
+
+    .section-left div:nth-child(1),
+    .section-left div:nth-child(6),
+    .section-right div:nth-child(5) {
+        grid-column: span 1;
+    }
+    .section-right div:nth-child(8) {
+        grid-column: span 2;
+        order: 20;
+    }
+}
+
+
+
+@media screen and (max-width: 575.98px) {
+    nav ul{
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+    nav li {
+        text-align: center;
+        width: 100%;
+    }
+    .section-left, .section-right {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-auto-flow: dense;
+    }
+    .section-left div:nth-child(1),
+    .section-left div:nth-child(6),
+    .section-right div:nth-child(5),
+    .section-left div:nth-child(4),
+    .section-right div:nth-child(4),
+    .section-right div:nth-child(8),
+    .section-left div:nth-child(5),
+    .section-right div:nth-child(3),
+    .section-right div:nth-child(9) {
+        grid-row: span 2;
+    }
+
+    .section-left > div, .section-right > div {
+        grid-column: span 1 !important;
+        /* Suprantu, jog šis sprendimas nėra geriausias, tačiau grid'o kolonų problemą sugebėjau išspręsti tik forsuodamas šią savybę.
+        Įsivaizduoju, jog kažkur yra aprašyta savybė, kuri konfliktuoja su šiuo aprašu. Deja jos rasti nepavyko :( */
+    }
+}

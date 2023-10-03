@@ -7,8 +7,8 @@ let cardForCar = document.getElementById('task1');
 // Sukuriame masyva su reikiama automobilio info.
 let car = [
     'Alfa-romeo',
-    '156',
-    '2004',
+    156,
+    2004,
     'Diesel'
 ];
 
