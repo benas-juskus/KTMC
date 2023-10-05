@@ -1,0 +1,16 @@
+header, .mid-heading {
+    background-image: url('img/header.jpg') !important;
+    min-height: 350px;
+}
+nav {
+    background-color: rgba(0, 0, 0, 0.317);
+}
+.header-p {
+    background-color: #28a74670;
+}
+
+.profile {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
