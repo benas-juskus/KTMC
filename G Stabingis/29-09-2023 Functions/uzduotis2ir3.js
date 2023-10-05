@@ -1,5 +1,7 @@
 //Parašyti funkcijas, kurioms paduodamas objektas su prekės informacija:
 
+
+//Sukuriame prekę su informacija.
 let product = {
         name: 'Apple iPhone 13 Pro',
         price: 999.00,
@@ -9,25 +11,30 @@ let product = {
         discount: 15
     };
 
+
+
 //Pirmoji funkcija sugeneruoja ir gražina pilną prekės išvedimą.
 
-function listFullProductInfo(product) {
-    let ul = document.createElement('ul');
+function listFullProductInfo(product) { //Funkcija priima viena argumenta, kuris yra objektas.
+    let ul = document.createElement('ul'); //Sukuriamas <ul> elementas kuriame bus talpinamos eilutės su objekto informacija.
 
-    for (let line in product) {
-        let li = document.createElement('li');
-        li.innerText = `${line}: ${product[line]}`;
-        ul.appendChild(li);
+    for (let line in product) { //Paleidžiame ciklą, kuris pereis per kiekvieną objekto duomenų eilutę.
+        let li = document.createElement('li'); //Kiekvinai duomenų eilutei sukuriamas <li> elementas.
+        li.innerText = `${line}: ${product[line]}`; //<li> elemento viduje išsaugome eilutės informaciją tekstiniu pavidalu "Raktas": "vertė".
+        ul.appendChild(li); //<li> elementą prisegame prie <ul> elemento.
     };
-    return ul;
+    return ul; //Grąžiname <ul> sąrašą su objekto informacija.
 };
 
-const productDisplayCard = document.getElementById('task2');
-productDisplayCard.appendChild(listFullProductInfo(product));
+const productDisplayCard = document.getElementById('task2'); //Randame elementą kuriame atvaizduosime objekto informaciją.
+productDisplayCard.appendChild(listFullProductInfo(product)); //Šiam elementui prisegame vaikinį elementą kurį sugeneruoja prieš tai aprašyta funkcija.
+
+
 
 //Antroji funkcija sugeneruoja ir gražina prekės katalogui naudojamą prekės išvedimą (Pavadinimas, paveiksliukas ir kaina su nuolaida ir be nuolaidos)
 
-function generateSingleProductDisplayInfo(product) {
+function generateSingleProductDisplayInfo(product) { //Funkcija priima vieną argumentą, kuris yra objektas su prekės informacija.
+    //Sukuriame visus html elementus, kurie bus reikalingi reikalaujamai informacijai atvaizduoti.
     let newDiv = document.createElement('div');
         newDiv.classList.add('preview');
     let newImg = document.createElement('img');
@@ -36,26 +43,27 @@ function generateSingleProductDisplayInfo(product) {
         newName.innerText = product.name;
     let price = document.createElement('p');
 
-    if (product.stock !== 0) {
-        if (product.discount > 0) {
-            let discountedPrice = (100 - product.discount) * product.price / 100;
-            price.innerHTML = `<s>EUR ${product.price.toFixed(2)}</s><br> EUR ${discountedPrice.toFixed(2)}`;
+    if (product.stock !== 0) { //Paleidžiame ciklą, kuris patikrina are "stock" rakto vertė nėra nulis.
+        if (product.discount > 0) { //Jei sąlyga atitinka, sekantis ciklas tikrina ar rakto "discount" vertė yra daugiau nei nulis.
+            let discountedPrice = (100 - product.discount) * product.price / 100; //Sąlygai atitikus, pagal pateiktą "discount" rakto skaitinę vertę apskaičiuojame kainą su nuolaida.
+            price.innerHTML = `<s>EUR ${product.price.toFixed(2)}</s><br> EUR ${discountedPrice.toFixed(2)}`; //Ankščiau sukurtam kainos vaizdavimo elementui, suteikiame senosios ir naujosios kainos vertes.
         } else {
-            price.innerText = product.price.toFixed(2);
+            price.innerText = product.price.toFixed(2); //Jei sąlyga neatitinka ir "discount" rakto vertė yra nulis, ankščiau sukurtam kainos vaizdavimo elementui prisikiriama rakto "price" vertė.
         }
-    } else {
-        newDiv.classList.add('no-stock');
-        price.innerText = 'No Stock';
+    } else {// Jei pirmionio ciklo sąlyga neatitinka ir yra lygi nuliui, 
+        newDiv.classList.add('no-stock'); //visos prekės vaizdavimo elementui priskiriama css klasė, pagal kurią bus taikomi stiliai "out of stock" prekėms,
+        price.innerText = 'No Stock'; //ankščiau sukurtam kainos vaizdavimo elementui prisikiriama vertė, nurodanti, kad prekės nėra.
     };
 
+    //Visi elementai prisegami į pagrindinį prekės vaizdavimo elementą.
     newDiv.appendChild(newImg);
     newDiv.appendChild(newName);
     newDiv.appendChild(price);
 
-    return newDiv;
+    return newDiv; //Šis elementas grąžinamas funkcijos.
 };
 
-
+// Sukuriame masyvą su objektais, kuriuose saugoma prekių informacija.
 let products = [
     {
         name: 'Apple iPhone 13 Pro',
@@ -139,10 +147,10 @@ let products = [
     }
 ];
 
-function generateProductCatalogue(source, destination) {
-    for (let product of source) {
-        let result = generateSingleProductDisplayInfo(product);
-        destination.appendChild(result);
+function generateProductCatalogue(source, destination) { //Funkcija turi du parametrus, kur "source" nurodome šaltinį, kuris paduos objektų informaciją, ir "destination", kur nurodysime html elementą kuriame bus talpinama ši informacija.
+    for (let product of source) { //Paleidžiamas ciklas, kuris eina per paduotus objektus,
+        let result = generateSingleProductDisplayInfo(product); //kiekvienas iš objektų yra apdorojamas prieš tai aprašytos funkcijos generateSingleProductDisplayInfo().
+        destination.appendChild(result); //Kiekvienas funkcijos apdorotas rezultatas prisegamas prie "destination" parametro nurodyto argumento.
     };
 };
 
