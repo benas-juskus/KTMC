@@ -24,3 +24,6 @@ img {
 li {
     overflow-wrap:break-word;
 }
+strong {
+    color: red;
+}

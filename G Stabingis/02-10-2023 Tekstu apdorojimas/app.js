@@ -95,3 +95,27 @@ while ((matchStartWithA = startWithAExpression.exec(taskFiveText)) !== null) {
 
 const taskFiveResultDisplay = document.getElementById('task5result');
 taskFiveResultDisplay.innerText = startWithAValues.join(', ');
+
+//Uzduotis 6
+
+let taskSixDisplayElement = document.getElementById('task6');
+let taskSixText = taskSixDisplayElement.textContent;
+
+let startWithMExpression = /\b(m\w*)\b/gi;
+
+let highlightedText = taskSixText.replace(startWithMExpression, '<strong>$1</strong>');
+
+taskSixDisplayElement.innerHTML = highlightedText;
+
+//Uzduotis 7
+
+let taskSevenDisplayElement = document.getElementById('task7');
+let taskSevenText = taskSevenDisplayElement.textContent;
+
+let startWithTExpression = /\b(t\w*)\b/gi;
+
+let highAndUpperText = taskSevenText.replace(startWithTExpression, (matchedWord) => {
+    return `<strong>${matchedWord.toUpperCase()}</strong>`;
+});
+
+taskSevenDisplayElement.innerHTML = highAndUpperText;
