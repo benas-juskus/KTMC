@@ -43,7 +43,8 @@ function generateSingleProductDisplayInfo(product) { //Funkcija priima vieną ar
         newName.innerText = product.name;
     let price = document.createElement('p');
 
-    if (product.stock !== 0) { //Paleidžiame ciklą, kuris patikrina are "stock" rakto vertė nėra nulis.
+
+    if (Number(product.stock) !== 0 && !!Number(product.stock) && product.stock !== true) { //Paleidžiame ciklą, kuris patikrina are "stock" rakto vertė nėra nulis, ir nėra jokios kitos reikšmės (boolean, string, undefined), kurios neatitinka prekės kiekio kriterijaus.
         if (product.discount > 0) { //Jei sąlyga atitinka, sekantis ciklas tikrina ar rakto "discount" vertė yra daugiau nei nulis.
             let discountedPrice = (100 - product.discount) * product.price / 100; //Sąlygai atitikus, pagal pateiktą "discount" rakto skaitinę vertę apskaičiuojame kainą su nuolaida.
             price.innerHTML = `<s>EUR ${product.price.toFixed(2)}</s><br> EUR ${discountedPrice.toFixed(2)}`; //Ankščiau sukurtam kainos vaizdavimo elementui, suteikiame senosios ir naujosios kainos vertes.
@@ -69,7 +70,7 @@ let products = [
         name: 'Apple iPhone 13 Pro',
         price: 999.00,
         image: 'https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-01.jpg',
-        stock: 1,
+        stock: 5,
         description: 'The Apple iPhone 13 Pro is the latest flagship smartphone with a Super Retina XDR display, A15 Bionic chip, and advanced camera system.',
         discount: 15
     },
@@ -109,7 +110,7 @@ let products = [
         name: 'Sony Xperia 1 III',
         price: 1099.00,
         image: 'https://fdn2.gsmarena.com/vv/pics/sony/sony-xperia-1-iii-02.jpg',
-        stock: 0,
+        stock: '7',
         description: 'The Sony Xperia 1 III boasts a 4K OLED display, a versatile camera system, and advanced audio features for multimedia enthusiasts.',
         discount: 10
     },
@@ -125,7 +126,7 @@ let products = [
         name: 'Oppo Find X3 Pro',
         price: 899.00,
         image: 'https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x3-pro-4.jpg',
-        stock: 0,
+        stock: true,
         description: 'The Oppo Find X3 Pro features a unique microscope camera, a high-refresh-rate display, and a Snapdragon 888 processor.',
         discount: 10
     },
