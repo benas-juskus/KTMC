@@ -3,11 +3,24 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 .card {
     box-shadow: 0 0 3px 3px rgba(147, 147, 147, 0.178);
     min-height: 150px;
     padding: 2%;
     margin-bottom: 5%;
     max-width: 800px;
+}
+#task3, #task4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+figure {
+    width: 30%;
+}
+img {
+    width: auto;
+    max-height: 200px;
+}
+li {
+    overflow-wrap:break-word;
 }
