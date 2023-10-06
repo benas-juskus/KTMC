@@ -119,3 +119,61 @@ let highAndUpperText = taskSevenText.replace(startWithTExpression, (matchedWord)
 });
 
 taskSevenDisplayElement.innerHTML = highAndUpperText;
+
+//Uzduotis 8
+
+let emailAddress = document.getElementById('task8text').textContent;
+const taskEightResultDisplay = document.getElementById('task8result');
+
+const userAndDomainExpression = /^([^@]+)@([^@]+)$/;
+
+let emailParts = userAndDomainExpression.exec(emailAddress);
+    emailParts.shift();
+
+for (let part of emailParts) {
+    let li = document.createElement('li');
+    li.textContent = part;
+    taskEightResultDisplay.appendChild(li);
+};
+
+//Uzduotis 9
+
+let link = document.getElementById('link').textContent;
+
+let protocolExpression = /^[^:]+/;
+let protocol = protocolExpression.exec(link);
+console.log(protocol[0]);
+
+let domainExpression = /\/\/(?:[^./]+\.)*([^./]+\.[^./]+)/;
+let domain = domainExpression.exec(link);
+console.log(domain[1]);
+let subDomainExpression = /\/\/([^./]+)./;
+let subDomain = subDomainExpression.exec(link);
+console.log(subDomain[1]);
+let catalogueExpression = /\/\/[^\/]+(\/[^*]+\/)/;
+let catalogue = catalogueExpression.exec(link);
+
+let fileExpression = /\/(?!.*\/)+([^?]+)/;
+let file = fileExpression.exec(link);
+
+let parameterExpression = /\?([^?]+)/;
+// let parameterExpression = /\?([^?.+]+)/;
+let parameters = parameterExpression.exec(link);
+// console.log(parameters)
+
+let urlSegments = {
+    Protocol: protocol[0],
+    Domain: domain[1],
+    SubDomain: subDomain[1],
+    Catalogue: catalogue[1],
+    File: file[1],
+    Parameters: parameters[1]
+};
+
+const taskNineResultDisplay = document.getElementById('task9result');
+
+for (let segment in urlSegments) {
+    let li = document.createElement('li');
+    li.textContent = `${segment}: ${urlSegments[segment]}`
+    taskNineResultDisplay.appendChild(li);
+}
