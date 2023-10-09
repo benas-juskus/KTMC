@@ -105,4 +105,6 @@ function siandien(metai, menuo, diena) {
     return metai == year && menuo == month + 1 && diena == day; //Palyginame ir grąžiname šiandienos Date() duomenis su įvestais funkcijos argumentuose.
 };
 
-kalendorius(2023, 10); //Paleidžiame funkciją.
+let thisYear = new Date().getFullYear();
+let thisMonth = new Date().getMonth() + 1;
+kalendorius(thisYear, thisMonth); //Paleidžiame funkciją.
