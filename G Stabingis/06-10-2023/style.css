@@ -1,0 +1,21 @@
+.table {
+    text-align: center;
+    border: solid black 1px;
+    border-collapse: collapse;
+}
+thead {
+    background-color: rgb(85, 203, 203);
+}
+td, th {
+    border: solid black 1px;
+    min-width: 40px;
+}
+.header {
+    grid-column: span 7;
+}
+.muted {
+    color: rgb(233, 231, 231);
+}
+.today {
+    background-color: burlywood;
+}
