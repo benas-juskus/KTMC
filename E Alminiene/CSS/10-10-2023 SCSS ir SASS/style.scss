@@ -1,0 +1,178 @@
+$main-color: #585848;
+$main-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .container {
+        width: 100%;
+
+        header {
+        display: flex;
+        justify-content: center;
+        background-image: url('IMG/header.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 30%;
+        min-height: 500px;
+        width: 100%;
+        .arrow-left, .arrow-right {
+            text-align: center;
+            align-self: center;
+            width: 10%;
+        }
+        .header-center {
+            margin-top: 2%;
+            width: 80%;
+            nav {
+                background-color: $main-color;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+
+                .directions {
+                    width: 100%;
+                    padding-left: 0;
+                    display: flex;
+                    justify-content: center;
+                    li {
+                        padding: 0 2%;
+                        text-wrap: nowrap;
+                    }
+                }
+                .logo img {
+                    height: 80px;
+                }
+        
+                .directions {
+                    display: flex;
+                    list-style: none;
+                    font-family: $main-font;
+                }
+        
+                .nav-left {
+                    margin-right: 2%;
+                    width: 10%;
+                    display: flex;
+                    justify-content: space-around;
+                    list-style: none;
+                    div {
+                        text-align: center;
+                        width: 100%;
+                        padding: 0 2%;
+                    }
+                    div:first-child {
+                        border-right: solid 1px white;
+                    }
+                }
+            }
+            .central-piece {
+                margin-top: 8%;
+                width: 30%;
+                font-family: $main-font;
+                h1 {
+                    color: $main-color;
+                    
+                }
+                button {
+                    background-color: $main-color;
+                    color: white;
+                    border: none;
+                    padding: 2% 10%;
+                    border-radius: 2px;
+                }
+            }
+        }   
+    }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .specialization {
+                background-image: url('img/specializationbg.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .bubbles {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: -50px;
+                    div {
+                        margin: 0 5px;
+                    }
+                    div img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        border: solid 7px $main-color;
+                    }
+                }
+                .spec-details {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    min-height: 500px;
+                    width: 80%;
+                    .spec-left {
+                        text-align: center;
+                        display: flex;
+                        color: grey;
+                        position: relative;
+                        background-color: black;
+                        width: 50%;
+                        max-width: 350px;
+                        height: 280px;
+                        h2 {
+                            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                            font-weight: 100;
+                            margin: 0 2%;
+                            writing-mode: vertical-rl;
+                            transform: rotate(180deg);
+                            padding: 5% 0;
+                        }
+                        img {
+                            position: absolute;
+                            max-width: 350px;
+                            left: 45px;
+                            top: 8%;
+                        }
+                    }
+                    .spec-right {
+                        font-family: $main-font;
+                        color: $main-color;
+                        width: 50%;
+                        .spec-types {
+                            background-image: url('img/spec-couch.jpg');
+                            background-repeat: no-repeat;
+                            background-position: 50% 90%;
+                            background-size: cover;
+                            text-align: center;
+                            display: flex;
+                            div {
+                                width: 100%;
+                                background-color: rgba(255, 255, 255, 0.872);
+                                padding-top:8%
+                            }
+                            div:hover {
+                                background-color: $main-color;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

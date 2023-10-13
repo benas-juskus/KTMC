@@ -3,7 +3,7 @@
     border: solid black 1px;
     border-collapse: collapse;
 }
-thead {
+th {
     background-color: rgb(85, 203, 203);
 }
 td, th {

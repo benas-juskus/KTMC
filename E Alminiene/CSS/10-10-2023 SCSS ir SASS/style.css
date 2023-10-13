@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+}
+.container header {
+  display: flex;
+  justify-content: center;
+  background-image: url("IMG/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  min-height: 500px;
+  width: 100%;
+}
+.container header .arrow-left, .container header .arrow-right {
+  text-align: center;
+  align-self: center;
+  width: 10%;
+}
+.container header .header-center {
+  margin-top: 2%;
+  width: 80%;
+}
+.container header .header-center nav {
+  background-color: #585848;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.container header .header-center nav .directions {
+  width: 100%;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+}
+.container header .header-center nav .directions li {
+  padding: 0 2%;
+  text-wrap: nowrap;
+}
+.container header .header-center nav .logo img {
+  height: 80px;
+}
+.container header .header-center nav .directions {
+  display: flex;
+  list-style: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.container header .header-center nav .nav-left {
+  margin-right: 2%;
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.container header .header-center nav .nav-left div {
+  text-align: center;
+  width: 100%;
+  padding: 0 2%;
+}
+.container header .header-center nav .nav-left div:first-child {
+  border-right: solid 1px white;
+}
+.container header .header-center .central-piece {
+  margin-top: 8%;
+  width: 30%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.container header .header-center .central-piece h1 {
+  color: #585848;
+}
+.container header .header-center .central-piece button {
+  background-color: #585848;
+  color: white;
+  border: none;
+  padding: 2% 10%;
+  border-radius: 2px;
+}
+.container main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container main .specialization {
+  background-image: url("img/specializationbg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container main .specialization .bubbles {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+}
+.container main .specialization .bubbles div {
+  margin: 0 5px;
+}
+.container main .specialization .bubbles div img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: solid 7px #585848;
+}
+.container main .specialization .spec-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 500px;
+  width: 80%;
+}
+.container main .specialization .spec-details .spec-left {
+  text-align: center;
+  display: flex;
+  color: grey;
+  position: relative;
+  background-color: black;
+  width: 50%;
+  max-width: 350px;
+  height: 280px;
+}
+.container main .specialization .spec-details .spec-left h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 100;
+  margin: 0 2%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 5% 0;
+}
+.container main .specialization .spec-details .spec-left img {
+  position: absolute;
+  max-width: 350px;
+  left: 45px;
+  top: 8%;
+}
+.container main .specialization .spec-details .spec-right {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #585848;
+  width: 50%;
+}
+.container main .specialization .spec-details .spec-right .spec-types {
+  background-image: url("img/spec-couch.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+}
+.container main .specialization .spec-details .spec-right .spec-types div {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.872);
+  padding-top: 8%;
+}
+.container main .specialization .spec-details .spec-right .spec-types div:hover {
+  background-color: #585848;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

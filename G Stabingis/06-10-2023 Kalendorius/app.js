@@ -14,8 +14,6 @@ function kalendorius (metai, menuo) {
 
     let tBody = document.createElement('tbody'); //Sukuriame table elemento dalį <tbody>, kurioje bus atvaizduotos mėnesio dienos.
 
-    
-
     let firstDay = pirmaDiena(metai, menuo); //Sukuriame kintamąjį, kuris funkcijos pirmaDiena() pagalba, paduos pirmos mėnesio savaitės dienos numerį.
     let numberOfDays = dienuSkaicius(metai, menuo); //Sukuriame kintamąjį, kuris funkcijos dienuSkaicius() pagalba, paduos reikiamo mėnesio dienų skaičių.
     let previousMonthNumberOfDays = dienuSkaicius(metai, menuo - 1); //Sukuriame kintamąjį, kuris paduos prieš tai buvusio mėnesio dienų skaičių.
