@@ -72,14 +72,14 @@ function kalendorius (metai, menuo, vertikalus=false) {
                 }
             }
         }
-    } else if (vertikalus == false) {
+    } else if (vertikalus == false) { //Jei parametras vertikalus gauna argumentą su verte false:
 
-        let weekHeader = document.createElement('tr');
+        let weekHeader = document.createElement('tr'); //Sukuriame eilutės elementą, kuriame vaizduosime savaitės dienų pavadinimų elementus.
         for (let day of weekdays) {
-            weekHeader.appendChild(day);
+            weekHeader.appendChild(day); //Ciklas prikabina kintamojo weekdays sugeneruotus elementus prie sukurtos eilutės elemento.
         }
         
-        header.appendChild(weekHeader);
+        header.appendChild(weekHeader); //Prikabiname savaitės dienų pavadinimus prie header elemento.
 
         for (let week = 0; week < numberOfWeeks; week++) { //Paleidžiame ciklą, kuris kurs savaitės eilutes, tol kol bus mažesnis nei nurodytas eilučių skaičius kintamajame numberOfRows.
             let tr = document.createElement('tr'); //Sukuriame elementą skirtą table eilutei atvaizduoti.
