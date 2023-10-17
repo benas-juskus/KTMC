@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
 /* FONTS */
-.script {
+.font-script {
     font-family: 'Bad Script', cursive;
 }
 
@@ -22,15 +22,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    min-height: 300px;
+    height: 20vh;
     background-image: url('../IMG/components/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 100%;
 }
 .header-cover {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
-    min-height: 300px;
+    height: 100%;
     background-color: rgba(255, 166, 0, 0.306);
 }
 .header-row {
@@ -39,11 +42,21 @@ body {
     margin: 0 2%;
 }
 header button {
+    margin-right: 50px;
+    padding: 17%;
     background: none;
-    border: none;
+    border: solid 2px black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     font-size: large;
 }
+.dropdown {
+    float: right;
+    margin-top: 20px;
+}
 .logo {
+    width: 80%;
+    text-align: center;
     font-size: 40px;
 }
 .logo h1 {
@@ -51,8 +64,8 @@ header button {
     padding: 0;
 }
 nav {
-    /* width: 100%;
-    height: 100%; */
+    height: 0px;
+    width: 100%;
 }
 
 nav ul{
@@ -69,13 +82,17 @@ nav li {
     margin: 1% 0;
     list-style: none;
 }
+nav li:hover, header button:hover {
+    color: rgb(108, 108, 108);
+    cursor: pointer;
+}
 
 /* MAIN SECTION */
 
 .where-to {
     display: flex;
     justify-content: space-around;
-    min-height: 60vh;
+    height: 70vh;
 }
 .destination {
     margin-top: 5%;
@@ -94,6 +111,10 @@ nav li {
     font-size: 50px;
     background-color: rgba(0, 0, 0, 0.441);
 }
+.destination h1:hover {
+    color: rgb(252, 222, 71);
+    cursor: pointer;
+}
 .beach {
     background-image: url('../IMG/beach.jpg');
 }
@@ -105,4 +126,16 @@ nav li {
 }
 .culture {
     background-image: url('../IMG/culture.jpg');
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    margin-top: 10%;
+    padding: 5%;
+    background-color: rgba(255, 166, 0, 0.306);
+}
+.social span {
+    font-size: xx-large;
+    padding: 0 30px;
 }

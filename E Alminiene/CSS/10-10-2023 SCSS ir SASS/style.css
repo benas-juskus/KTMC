@@ -117,18 +117,19 @@ body {
 .container main .specialization .spec-details {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   min-height: 500px;
-  width: 80%;
+  width: 100%;
 }
 .container main .specialization .spec-details .spec-left {
+  margin-right: 5%;
   text-align: center;
   display: flex;
   color: grey;
   position: relative;
   background-color: black;
-  width: 50%;
+  width: 30%;
   max-width: 350px;
   height: 280px;
 }
@@ -151,6 +152,9 @@ body {
   color: #585848;
   width: 50%;
 }
+.container main .specialization .spec-details .spec-right p {
+  width: 60%;
+}
 .container main .specialization .spec-details .spec-right .spec-types {
   background-image: url("img/spec-couch.jpg");
   background-repeat: no-repeat;
@@ -160,6 +164,10 @@ body {
   display: flex;
 }
 .container main .specialization .spec-details .spec-right .spec-types div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.872);
   padding-top: 8%;
@@ -167,4 +175,85 @@ body {
 .container main .specialization .spec-details .spec-right .spec-types div:hover {
   background-color: #585848;
   color: white;
+}
+.container main .services {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+  display: flex;
+  text-align: right;
+}
+.container main .services .service {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: small;
+}
+.container main .services .service button {
+  background-color: #585848;
+  color: white;
+  border: none;
+  padding: 2% 10%;
+  border-radius: 2px;
+}
+.container main .services .service .service-block {
+  display: flex;
+  align-items: center;
+  padding: 10%;
+}
+.container main .services .service .service-block .graphic {
+  width: 100%;
+  max-width: 60px;
+  margin-right: 2%;
+}
+.container main .services .service h3 {
+  margin: 0;
+}
+.container main .services .service:nth-child(1) {
+  background-image: url("img/service1.jpg");
+}
+.container main .services .service:nth-child(2) {
+  background-image: url("img/service2.jpg");
+}
+.container main .services .service:nth-child(3) {
+  background-image: url("img/service3.jpg");
+}
+.container main .services .black-bg-transparent {
+  background-color: rgba(0, 0, 0, 0.568);
+}
+.container main .our-project {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.container main .our-project .project-content {
+  width: 80%;
+}
+.container main .our-project .project-content .title {
+  color: #585848;
+  width: 50%;
+  margin-bottom: 5%;
+}
+.container main .our-project .project-content .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.container main .our-project .project-content .gallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container main .our-project .project-content .gallery div:first-child, .container main .our-project .project-content .gallery div:nth-child(7) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.container main .our-project .project-content .gallery div:nth-child(4) {
+  grid-column: span 2;
+}
+.container main .our-project .project-content .gallery div:nth-child(8) {
+  grid-column: span 2;
 }/*# sourceMappingURL=style.css.map */

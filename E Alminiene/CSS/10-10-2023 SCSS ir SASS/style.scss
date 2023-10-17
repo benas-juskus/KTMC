@@ -1,7 +1,6 @@
 $main-color: #585848;
 $main-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-
 body {
     margin: 0;
     display: flex;
@@ -122,17 +121,18 @@ body {
                 .spec-details {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-around;
+                    justify-content: flex-end;
                     align-items: center;
                     min-height: 500px;
-                    width: 80%;
+                    width: 100%;
                     .spec-left {
+                        margin-right: 5%;
                         text-align: center;
                         display: flex;
                         color: grey;
                         position: relative;
                         background-color: black;
-                        width: 50%;
+                        width: 30%;
                         max-width: 350px;
                         height: 280px;
                         h2 {
@@ -154,6 +154,9 @@ body {
                         font-family: $main-font;
                         color: $main-color;
                         width: 50%;
+                        p {
+                            width: 60%;
+                        }
                         .spec-types {
                             background-image: url('img/spec-couch.jpg');
                             background-repeat: no-repeat;
@@ -162,6 +165,10 @@ body {
                             text-align: center;
                             display: flex;
                             div {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
                                 width: 100%;
                                 background-color: rgba(255, 255, 255, 0.872);
                                 padding-top:8%
@@ -173,6 +180,88 @@ body {
                         }
                     }
                 }
+            }
+            .services {
+                font-family: $main-font;
+                color: white;
+                display: flex;
+                text-align: right;
+
+                .service {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    font-size: small;
+                    button {
+                        background-color: $main-color;
+                        color: white;
+                        border: none;
+                        padding: 2% 10%;
+                        border-radius: 2px;
+                    }
+                    .service-block {
+                        display: flex;
+                        align-items: center;
+                        padding: 10%;
+                        .graphic {
+                            width: 100%;
+                            max-width: 60px;
+                            margin-right: 2%;
+                        }
+                    }
+                    h3 {
+                        margin: 0;
+                    }
+                }
+                .service:nth-child(1) {
+                    background-image: url('img/service1.jpg');
+                }
+                .service:nth-child(2) {
+                    background-image: url('img/service2.jpg');
+                }
+                .service:nth-child(3) {
+                    background-image: url('img/service3.jpg');
+                }
+                .black-bg-transparent {
+                    background-color: rgba(0, 0, 0, 0.568);
+                }
+            }
+            .our-project {
+                margin-top: 2%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: $main-font;
+                
+                .project-content {
+                    width: 80%;
+                    .title {
+                        color: $main-color;
+                        width: 50%;
+                        margin-bottom: 5%;
+                    }
+                    .gallery {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-rows: repeat(4, 1fr);
+                        grid-gap: 10px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        div:first-child, div:nth-child(7) {
+                            grid-column: span 2;
+                            grid-row: span 2;
+                        }
+                        div:nth-child(4) {
+                            grid-column: span 2;
+                        }
+                        div:nth-child(8) {
+                            grid-column: span 2;
+                        }
+                    }
+                }                
             }
         }
     }
