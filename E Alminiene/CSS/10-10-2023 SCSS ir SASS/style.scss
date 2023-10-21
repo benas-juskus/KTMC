@@ -28,6 +28,7 @@ body {
         .header-center {
             margin-top: 2%;
             width: 80%;
+            max-width: 1000px;
             nav {
                 background-color: $main-color;
                 display: flex;
@@ -182,12 +183,14 @@ body {
                 }
             }
             .services {
+                width: 100%;
                 font-family: $main-font;
                 color: white;
                 display: flex;
                 text-align: right;
 
                 .service {
+                    width: 100%;
                     background-repeat: no-repeat;
                     background-size: cover;
                     font-size: small;
@@ -222,7 +225,7 @@ body {
                     background-image: url('img/service3.jpg');
                 }
                 .black-bg-transparent {
-                    background-color: rgba(0, 0, 0, 0.568);
+                    background-color: rgba(0, 0, 0, 0.768);
                 }
             }
             .our-project {
@@ -235,6 +238,7 @@ body {
                 
                 .project-content {
                     width: 80%;
+                    max-width: 1000px;
                     .title {
                         color: $main-color;
                         width: 50%;
@@ -263,5 +267,321 @@ body {
                     }
                 }                
             }
+            .divider {
+                background-image: url('img/service2.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                div {
+                    background-color: #585848db;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2% 0;
+                }
+                button {
+                    background-color: black;
+                    color: white;
+                    border: none;
+                    border-radius: 2px;
+                    min-height: 30px;
+                    padding: 0 2%;
+                }
+            }
+            .our-architecture {
+                margin-top: 2%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: $main-font;
+                .architecture-content {
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+                    max-width: 1000px;
+                    .title {
+                        width: 50%;
+                        text-align: right;
+                        color: $main-color;
+                        align-self: end;
+                        margin-bottom: 2%;
+                    }
+                    .person {
+                        background-image: url('img/service2.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        margin-bottom: 5%;
+                        .transparent-bg {
+                            position: relative;
+                            background: linear-gradient(45deg, rgba(88, 88, 72, 0.892) 55%, rgba(255, 255, 255, 0) 55%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 5% 0;
+                            .navigator {
+                                position: absolute;
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                background-color: black;
+                                left: 25px;
+                                bottom: 15px;
+                                height: 45px;
+                                width: 110px;
+                                .arrow {
+                                    text-align: center;
+                                    width: 100%;
+                                }
+                                .arrow:first-child {
+                                    border-right: solid 1px $main-color;
+                                }
+                                .arrow svg {
+                                    color: $main-color;
+                                    height: 35px;
+                                }
+                            }
+                            .person-box {
+                                display: flex;
+                                text-align: right;
+                                h1 {
+                                    font-size: xx-large;
+                                }
+                                h1, p {
+                                    color: white;
+                                    margin: 0;
+                                    padding: 0;
+                                    writing-mode: vertical-rl;
+                                    transform: rotate(180deg);
+                                    padding: 5% 0;
+                                }
+                            }
+                            .person-photo {
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                img {
+                                    border: solid 10px #58584883;
+                                    object-fit: cover;
+                                    object-position: 50% 0%;
+                                    width: 300px;
+                                    height: 300px;
+                                }
+                                .links {
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                    align-items: center;
+                                    color: rgb(168, 168, 168);
+                                    position: absolute;
+                                    bottom: 13px;
+                                    right: 10px;
+                                    background-color: rgba(0, 0, 0, 0.795);
+                                    width: 50%;
+                                    height: 10%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .partners {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background-color: rgb(244, 243, 243);
+                min-height: 50px;
+                padding: 3% 0;
+                .logos {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 80%;
+                    max-width: 1000px;
+                    img {
+                        max-height: 80px;
+                    }
+                }
+            }
+            .blog {
+                margin-top: 2%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: $main-font;
+                width: 100%;
+                .blog-content {
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+                    max-width: 1000px;
+                    .title {
+                        color: $main-color;
+                        width: 50%;
+                    }
+                    .blog-cards {
+                        margin-top: 2%;
+                        color: rgb(196, 196, 196);
+                        display: flex;
+                        justify-content: space-between;
+                        .left-card {
+                            aspect-ratio: 1 / 0.9;
+                            position: relative;
+                            margin-right: 1%;
+                            background-image: url('https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80');
+                            background-position: 50% 80%;
+                            width: 100%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            display: flex;
+                            .date {
+                                background-color: $main-color;
+                                position: absolute;
+                                top: -2%;
+                                right: 0%;
+                                height: 35%;
+                                width: 25%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                img {
+                                    height: 35%;
+                                }
+                                p {
+                                    margin: 0;
+                                }
+                            }
+                            .post {
+                                text-wrap: hidden;
+                                height: 40%;
+                                align-self: flex-end;
+                                padding: 2% 4%;
+                                background-color: rgba(0, 0, 0, 0.822);
+                                font-size: 0.8vw;
+                                button {
+                                    font-family: $main-font;
+                                    color: rgb(126, 126, 126);
+                                    background: none;
+                                    border: none;
+                                }
+                            }
+                        }
+                        .right-card {
+                            aspect-ratio: 1 / 0.9;
+                            position: relative;
+                            margin-left: 1%;
+                            background-image: url('https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=958&q=80');
+                            width: 100%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            .date {
+                                background-color: $main-color;
+                                position: absolute;
+                                top: -2%;
+                                right: 0%;
+                                height: 35%;
+                                width: 25%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                img {
+                                    height: 35%;
+                                }
+                                p {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .callback {
+                margin-top: 5%;
+                width: 100%;
+                background-image: url('IMG/aerial.jpg');
+                height: 500px;
+                font-family: $main-font;
+                .transparent-bg {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.842);
+                    .contact-content {
+                        max-height: 70%;
+                        margin-top: 2%;
+                        color: rgb(196, 196, 196);
+                        display: flex;
+                        justify-content: space-between;
+                        width: 80%;
+                        max-width: 1000px;
+                        .request {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            width: 100%;
+                            padding-left: 5%;
+                            margin-right: 1%;
+                            font-size: 1.2vw;
+                            aspect-ratio: 1 / 0.9;
+                            background-image: url('https://images.unsplash.com/photo-1636368208791-17b81ed832d2?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1929');
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                            h3 {
+                                font-size: x-large;
+                            }
+                            p {
+                                line-height: 1.6;
+                            }
+                        }
+                        .contact-input {
+                            width: 100%;
+                            aspect-ratio: 1 / 0.9;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            margin-left: 1%;
+                            .line {
+                                border-bottom: solid 1px rgb(108, 108, 108);
+                                padding-bottom: 1%;
+                            }
+                            input {
+                                background: none;
+                                border: none;
+                                
+                            }
+                            textarea {
+                                background: none;
+                                border: none;
+                                
+                            }
+                            button {
+                                text-wrap: nowrap;
+                                width: 35%;
+                                background-color: $main-color;
+                                color: white;
+                                border: none;
+                                padding: 2% 0%;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $main-font;
+            color: $main-color;
+            padding: 2%;
         }
     }

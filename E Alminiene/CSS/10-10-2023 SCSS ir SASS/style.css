@@ -27,6 +27,7 @@ body {
 .container header .header-center {
   margin-top: 2%;
   width: 80%;
+  max-width: 1000px;
 }
 .container header .header-center nav {
   background-color: #585848;
@@ -177,12 +178,14 @@ body {
   color: white;
 }
 .container main .services {
+  width: 100%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: white;
   display: flex;
   text-align: right;
 }
 .container main .services .service {
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   font-size: small;
@@ -217,7 +220,7 @@ body {
   background-image: url("img/service3.jpg");
 }
 .container main .services .black-bg-transparent {
-  background-color: rgba(0, 0, 0, 0.568);
+  background-color: rgba(0, 0, 0, 0.768);
 }
 .container main .our-project {
   margin-top: 2%;
@@ -229,6 +232,7 @@ body {
 }
 .container main .our-project .project-content {
   width: 80%;
+  max-width: 1000px;
 }
 .container main .our-project .project-content .title {
   color: #585848;
@@ -256,4 +260,320 @@ body {
 }
 .container main .our-project .project-content .gallery div:nth-child(8) {
   grid-column: span 2;
+}
+.container main .divider {
+  background-image: url("img/service2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container main .divider div {
+  background-color: rgba(88, 88, 72, 0.8588235294);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 0;
+}
+.container main .divider button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  min-height: 30px;
+  padding: 0 2%;
+}
+.container main .our-architecture {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.container main .our-architecture .architecture-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1000px;
+}
+.container main .our-architecture .architecture-content .title {
+  width: 50%;
+  text-align: right;
+  color: #585848;
+  align-self: end;
+  margin-bottom: 2%;
+}
+.container main .our-architecture .architecture-content .person {
+  background-image: url("img/service2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-bottom: 5%;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg {
+  position: relative;
+  background: linear-gradient(45deg, rgba(88, 88, 72, 0.892) 55%, rgba(255, 255, 255, 0) 55%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .navigator {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  left: 25px;
+  bottom: 15px;
+  height: 45px;
+  width: 110px;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .navigator .arrow {
+  text-align: center;
+  width: 100%;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .navigator .arrow:first-child {
+  border-right: solid 1px #585848;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .navigator .arrow svg {
+  color: #585848;
+  height: 35px;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .person-box {
+  display: flex;
+  text-align: right;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .person-box h1 {
+  font-size: xx-large;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .person-box h1, .container main .our-architecture .architecture-content .person .transparent-bg .person-box p {
+  color: white;
+  margin: 0;
+  padding: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 5% 0;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .person-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .person-photo img {
+  border: solid 10px rgba(88, 88, 72, 0.5137254902);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  width: 300px;
+  height: 300px;
+}
+.container main .our-architecture .architecture-content .person .transparent-bg .person-photo .links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgb(168, 168, 168);
+  position: absolute;
+  bottom: 13px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.795);
+  width: 50%;
+  height: 10%;
+}
+.container main .partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(244, 243, 243);
+  min-height: 50px;
+  padding: 3% 0;
+}
+.container main .partners .logos {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1000px;
+}
+.container main .partners .logos img {
+  max-height: 80px;
+}
+.container main .blog {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  width: 100%;
+}
+.container main .blog .blog-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1000px;
+}
+.container main .blog .blog-content .title {
+  color: #585848;
+  width: 50%;
+}
+.container main .blog .blog-content .blog-cards {
+  margin-top: 2%;
+  color: rgb(196, 196, 196);
+  display: flex;
+  justify-content: space-between;
+}
+.container main .blog .blog-content .blog-cards .left-card {
+  aspect-ratio: 1/0.9;
+  position: relative;
+  margin-right: 1%;
+  background-image: url("https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80");
+  background-position: 50% 80%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+.container main .blog .blog-content .blog-cards .left-card .date {
+  background-color: #585848;
+  position: absolute;
+  top: -2%;
+  right: 0%;
+  height: 35%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container main .blog .blog-content .blog-cards .left-card .date img {
+  height: 35%;
+}
+.container main .blog .blog-content .blog-cards .left-card .date p {
+  margin: 0;
+}
+.container main .blog .blog-content .blog-cards .left-card .post {
+  text-wrap: hidden;
+  height: 40%;
+  align-self: flex-end;
+  padding: 2% 4%;
+  background-color: rgba(0, 0, 0, 0.822);
+  font-size: 0.8vw;
+}
+.container main .blog .blog-content .blog-cards .left-card .post button {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(126, 126, 126);
+  background: none;
+  border: none;
+}
+.container main .blog .blog-content .blog-cards .right-card {
+  aspect-ratio: 1/0.9;
+  position: relative;
+  margin-left: 1%;
+  background-image: url("https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=958&q=80");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container main .blog .blog-content .blog-cards .right-card .date {
+  background-color: #585848;
+  position: absolute;
+  top: -2%;
+  right: 0%;
+  height: 35%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container main .blog .blog-content .blog-cards .right-card .date img {
+  height: 35%;
+}
+.container main .blog .blog-content .blog-cards .right-card .date p {
+  margin: 0;
+}
+.container main .callback {
+  margin-top: 5%;
+  width: 100%;
+  background-image: url("IMG/aerial.jpg");
+  height: 500px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.container main .callback .transparent-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.842);
+}
+.container main .callback .transparent-bg .contact-content {
+  max-height: 70%;
+  margin-top: 2%;
+  color: rgb(196, 196, 196);
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1000px;
+}
+.container main .callback .transparent-bg .contact-content .request {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-left: 5%;
+  margin-right: 1%;
+  font-size: 1.2vw;
+  aspect-ratio: 1/0.9;
+  background-image: url("https://images.unsplash.com/photo-1636368208791-17b81ed832d2?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1929");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.container main .callback .transparent-bg .contact-content .request h3 {
+  font-size: x-large;
+}
+.container main .callback .transparent-bg .contact-content .request p {
+  line-height: 1.6;
+}
+.container main .callback .transparent-bg .contact-content .contact-input {
+  width: 100%;
+  aspect-ratio: 1/0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1%;
+}
+.container main .callback .transparent-bg .contact-content .contact-input .line {
+  border-bottom: solid 1px rgb(108, 108, 108);
+  padding-bottom: 1%;
+}
+.container main .callback .transparent-bg .contact-content .contact-input input {
+  background: none;
+  border: none;
+}
+.container main .callback .transparent-bg .contact-content .contact-input textarea {
+  background: none;
+  border: none;
+}
+.container main .callback .transparent-bg .contact-content .contact-input button {
+  text-wrap: nowrap;
+  width: 35%;
+  background-color: #585848;
+  color: white;
+  border: none;
+  padding: 2% 0%;
+  border-radius: 2px;
+}
+.container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #585848;
+  padding: 2%;
 }/*# sourceMappingURL=style.css.map */

@@ -55,13 +55,14 @@ header button {
     margin-top: 20px;
 }
 .logo {
+    align-self: flex-end;
     width: 80%;
     text-align: center;
     font-size: 40px;
 }
-.logo h1 {
-    margin: 0;
-    padding: 0;
+.logo img {
+    width: 100%;
+    height: 15vh;
 }
 nav {
     height: 0px;
@@ -93,6 +94,10 @@ nav li:hover, header button:hover {
     display: flex;
     justify-content: space-around;
     height: 70vh;
+}
+.where-to h1 {
+    margin: 0;
+    padding: 0;
 }
 .destination {
     margin-top: 5%;

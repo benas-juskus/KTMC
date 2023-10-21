@@ -21,8 +21,8 @@ $toggler.addEventListener('click', function() {
   }
 });
 
-let calcOperationDisplay = document.querySelector('.calculator-operation');
-let calcResultDisplay = document.querySelector('.calculator-operation-result');
+let calcSmallDisplay = document.querySelector('.calculator-operation');
+let calcBigDisplay = document.querySelector('.calculator-operation-result');
 let calculatorButtonWrapper = document.querySelector('.calculator-button-wrapper');
 
 let ongoingOperation = [];
@@ -38,7 +38,15 @@ let percentBtn = calculatorButtonWrapper.children[16];
 let dotBtn = calculatorButtonWrapper.children[18];
 
 
+plusBtn.addEventListener('click', () => {
+  ongoingOperation.push(ongoingOperationChunk.join(''));
+  calcBigDisplay.innerText = eval(ongoingOperation.join(''));
+  ongoingOperation.push(' + ');
+  ongoingOperationChunk = [];
+  calcSmallDisplay.innerText = ongoingOperation.join('');
 
+  console.log(ongoingOperation);
+});
 
 divisionBtn.addEventListener('click', () => {
     console.log('ongoingOperationChunk inside /: ' + ongoingOperationChunk);
@@ -47,15 +55,15 @@ divisionBtn.addEventListener('click', () => {
     console.log(ongoingOperation);
   if (ongoingOperation.length !== 0 && ongoingOperationChunk[ongoingOperationChunk.length - 1] !== ' / ' ){
     ongoingOperation.push(' / ');
-    calcOperationDisplay.innerText = ongoingOperation.join('');
+    calcSmallDisplay.innerText = ongoingOperation.join('');
 
     if (ongoingOperation.length > 2) {
       console.log('ongoingOperation length = 3: ' + ongoingOperation.length)
       ongoingOperation.pop();
       console.log(ongoingOperation);
       console.log(eval(ongoingOperation.join('')));
-      calcResultDisplay.innerText = eval(ongoingOperation.join(''));
-      ongoingOperationChunk.push(calcResultDisplay.innerText);
+      calcBigDisplay.innerText = eval(ongoingOperation.join(''));
+      ongoingOperationChunk.push(calcBigDisplay.innerText);
       console.log(ongoingOperationChunk);
     }
 
@@ -69,15 +77,12 @@ multiplyBtn.addEventListener('click', () => {
 });
 eraserBtn.addEventListener('click', () => {
   ongoingOperation.pop();
-  calcOperationDisplay.innerText = ongoingOperation.join('');
+  calcSmallDisplay.innerText = ongoingOperation.join('');
 });
 minusBtn.addEventListener('click', () => {
   console.log('minus was pressed');
 });
-plusBtn.addEventListener('click', () => {
-  ongoingOperation.push(ongoingOperationChunk.join(''));
-  ongoingOperationChunk = [];
-});
+
 
 
 resultBtn.addEventListener('click', () => {
@@ -86,15 +91,15 @@ resultBtn.addEventListener('click', () => {
     ongoingOperationChunk = [];
     // console.log(ongoingOperation);
   if (ongoingOperation.length !== 0){
-    calcOperationDisplay.innerText = ongoingOperation.join('');
+    calcSmallDisplay.innerText = ongoingOperation.join('');
 
     if (ongoingOperation.length > 2) {
       console.log('ongoingOperation length = 3: ' + ongoingOperation.length)
       ongoingOperation.pop();
       console.log(ongoingOperation);
       console.log(eval(ongoingOperation.join('')));
-      calcResultDisplay.innerText = eval(ongoingOperation.join(''));
-      ongoingOperationChunk.push(calcResultDisplay.innerText);
+      calcBigDisplay.innerText = eval(ongoingOperation.join(''));
+      ongoingOperationChunk.push(calcBigDisplay.innerText);
       console.log(ongoingOperationChunk);
     }
 
@@ -118,13 +123,13 @@ for (let button of calculatorButtonWrapper.children) {
     if (button.children[0].innerText == 'C') {
       ongoingOperation = [];
       ongoingOperationChunk = [];
-      calcResultDisplay.innerText = '0';
-      calcOperationDisplay.innerText = ongoingOperation;
+      calcBigDisplay.innerText = '0';
+      calcSmallDisplay.innerText = ongoingOperation;
     } else if (button.children[0].innerText !== ''){
       // console.log('pushing from lower');
       ongoingOperationChunk.push(button.children[0].innerText);
       console.log('ongoingOperationChunk: ' + ongoingOperationChunk);
-      calcResultDisplay.innerText = ongoingOperationChunk.join('');
+      calcBigDisplay.innerText = ongoingOperationChunk.join('');
     }
     
   })
