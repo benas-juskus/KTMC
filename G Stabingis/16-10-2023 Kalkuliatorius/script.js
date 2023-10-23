@@ -56,7 +56,6 @@ function mathAction (numOne, operator, numTwo) {
 };
 
 function mathLogic(op) {
-
   if (operator == '') {
     operator = op;
   }
@@ -67,20 +66,20 @@ function mathLogic(op) {
   }
 
   if (firstNumber == '') {
-
-
     firstNumber = addZero(ongoingOperation).join('');
     operator = op;
     calcSmallDisplay.innerText = `${firstNumber} ${operator}`;
     ongoingOperation = [];
 
   } else if (firstNumber != '') {
-
+    
     if (ongoingOperation.length == 0) {
       return;
     }
+    if (secondNumber == '') {
+      secondNumber = addZero(ongoingOperation).join('');
+    }
 
-    secondNumber = addZero(ongoingOperation).join('');
     let result = mathAction(firstNumber, operator, secondNumber);
     result.toFixed(5);
     result = parseFloat(result);
@@ -94,6 +93,7 @@ function mathLogic(op) {
     calcBigDisplay.innerText = result;
     operator = op;
     calcSmallDisplay.innerText = `${firstNumber} ${operator}`;
+    
     ongoingOperation = [];
     secondNumber = '';
 
@@ -184,7 +184,6 @@ percentBtn.addEventListener('click', () => {
   secondNumber = ongoingOperation.join('');
   secondNumber = firstNumber / 100 * secondNumber;
   calcSmallDisplay.innerText = `${firstNumber} ${operator} ${parseFloat(secondNumber.toFixed(5))} = `;
-  ongoingOperation = [];
 });
 window.addEventListener('keydown', function (event) {
   if (event.key === "%") {
