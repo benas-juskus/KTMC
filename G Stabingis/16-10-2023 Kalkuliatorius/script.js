@@ -26,7 +26,9 @@ let calcBigDisplay = document.querySelector('.calculator-operation-result');
 let calculatorButtonWrapper = document.querySelector('.calculator-button-wrapper');
 
 let ongoingOperation = [];
-let ongoingOperationChunk = [];
+let firstNumber = '';
+let secondNumber = '';
+let operator = '';
 
 let divisionBtn = calculatorButtonWrapper.children[1];
 let multiplyBtn = calculatorButtonWrapper.children[2];
@@ -38,107 +40,162 @@ let percentBtn = calculatorButtonWrapper.children[16];
 let dotBtn = calculatorButtonWrapper.children[18];
 
 
-plusBtn.addEventListener('click', () => {
-  ongoingOperation.push(ongoingOperationChunk.join(''));
-  calcBigDisplay.innerText = eval(ongoingOperation.join(''));
-  ongoingOperation.push(' + ');
-  ongoingOperationChunk = [];
-  calcSmallDisplay.innerText = ongoingOperation.join('');
+function mathAction (numOne, operator, numTwo) {
+  let result = eval(`${numOne} ${operator} ${numTwo}`);
+  return result;
+};
 
-  console.log(ongoingOperation);
-});
+function mathLogic(op) {
 
-divisionBtn.addEventListener('click', () => {
-    console.log('ongoingOperationChunk inside /: ' + ongoingOperationChunk);
-    ongoingOperation.push(ongoingOperationChunk.join(''));
-    ongoingOperationChunk = [];
-    console.log(ongoingOperation);
-  if (ongoingOperation.length !== 0 && ongoingOperationChunk[ongoingOperationChunk.length - 1] !== ' / ' ){
-    ongoingOperation.push(' / ');
-    calcSmallDisplay.innerText = ongoingOperation.join('');
+  if (operator == '') {
+    operator = op;
+  }
 
-    if (ongoingOperation.length > 2) {
-      console.log('ongoingOperation length = 3: ' + ongoingOperation.length)
-      ongoingOperation.pop();
-      console.log(ongoingOperation);
-      console.log(eval(ongoingOperation.join('')));
-      calcBigDisplay.innerText = eval(ongoingOperation.join(''));
-      ongoingOperationChunk.push(calcBigDisplay.innerText);
-      console.log(ongoingOperationChunk);
+  if (firstNumber == '') {
+
+    firstNumber = ongoingOperation.join('');
+    operator = op;
+    calcSmallDisplay.innerText = `${firstNumber} ${operator}`;
+    ongoingOperation = [];
+
+  } else if (firstNumber != '') {
+
+    if (ongoingOperation.length == 0) {
+      return;
     }
 
-  };
-});
+    secondNumber = ongoingOperation.join('');
+    let result = mathAction(firstNumber, operator, secondNumber);
+    result.toFixed(5);
+    result = parseFloat(result);
+    if (result.toString().length > 10) {
+      calcBigDisplay.style.fontSize = '30px';
+    }
+    firstNumber = result;
+    calcBigDisplay.innerText = result;
+    operator = op;
+    calcSmallDisplay.innerText = `${firstNumber} ${operator}`;
+    ongoingOperation = [];
+    secondNumber = '';
+
+  }
+};
+
+let operatorVariables = {
+  '/': divisionBtn,
+  '*': multiplyBtn,
+  '-': minusBtn,
+  '+': plusBtn,
+};
+
+for (let operator in operatorVariables) {
+  operatorVariables[operator].addEventListener('click', () => {
+    mathLogic(operator);
+  });
+  window.addEventListener('keydown', function (event) {
+    if (event.key === operator) {
+      operatorVariables[operator].click();
+    }
+  });
+};
 
 
-
-multiplyBtn.addEventListener('click', () => {
-  console.log('multiply was pressed');
-});
 eraserBtn.addEventListener('click', () => {
+
+  if (ongoingOperation.length == 0) {
+    return;
+  }
+
   ongoingOperation.pop();
-  calcSmallDisplay.innerText = ongoingOperation.join('');
+  calcBigDisplay.innerText = ongoingOperation.join('');
+
+  if (ongoingOperation.length == 0) {
+    calcBigDisplay.innerText = 0;
+  }
 });
-minusBtn.addEventListener('click', () => {
-  console.log('minus was pressed');
+window.addEventListener('keydown', function (event) {
+  if (event.key === "Backspace") {
+    eraserBtn.click();
+  }
 });
 
 
 
 resultBtn.addEventListener('click', () => {
-    // console.log('ongoingOperationChunk inside /: ' + ongoingOperationChunk);
-    ongoingOperation.push(ongoingOperationChunk.join(''));
-    ongoingOperationChunk = [];
-    // console.log(ongoingOperation);
-  if (ongoingOperation.length !== 0){
-    calcSmallDisplay.innerText = ongoingOperation.join('');
+  calcBigDisplay.style.fontSize = '42px';
 
-    if (ongoingOperation.length > 2) {
-      console.log('ongoingOperation length = 3: ' + ongoingOperation.length)
-      ongoingOperation.pop();
-      console.log(ongoingOperation);
-      console.log(eval(ongoingOperation.join('')));
-      calcBigDisplay.innerText = eval(ongoingOperation.join(''));
-      ongoingOperationChunk.push(calcBigDisplay.innerText);
-      console.log(ongoingOperationChunk);
-    }
+  if (firstNumber == '') {
+    return;
+  }
 
-  };
+  if (secondNumber == '') {
+    secondNumber = ongoingOperation.join('');
+  }
+
+  let result = mathAction(firstNumber, operator, secondNumber);
+  result = result.toFixed(5);
+  result = parseFloat(result);
+  if (result.toString().length > 10) {
+    calcBigDisplay.style.fontSize = '30px';
+  }
+
+  calcBigDisplay.innerText = result;
+  calcSmallDisplay.innerText = `${firstNumber} ${operator} ${secondNumber} = `;
+  ongoingOperation = [];
+  firstNumber = result;
+  secondNumber = '';
+  operator = '';
 });
-
+window.addEventListener('keydown', function (event) {
+  if (event.key === "=") {
+    resultBtn.click();
+  }
+});
 
 percentBtn.addEventListener('click', () => {
-  console.log('percent was pressed');
+  secondNumber = ongoingOperation.join('');
+  secondNumber = firstNumber / 100 * secondNumber;
+  calcSmallDisplay.innerText = `${firstNumber} ${operator} ${parseFloat(secondNumber.toFixed(5))} = `;
+  ongoingOperation = [];
 });
+window.addEventListener('keydown', function (event) {
+  if (event.key === "%") {
+    percentBtn.click();
+  }
+});
+
 dotBtn.addEventListener('click', () => {
-  console.log('dot was pressed');
+  if (ongoingOperation.includes('.')) {
+    return;
+  }
+  ongoingOperation.push('.');
+  calcBigDisplay.innerText = ongoingOperation.join('');
 });
-
-
+window.addEventListener('keydown', function (event) {
+  if (event.key === "." || event.key === ",") {
+    dotBtn.click();
+  }
+});
 
 for (let button of calculatorButtonWrapper.children) {
 
   button.addEventListener('click', () => {
 
     if (button.children[0].innerText == 'C') {
+      firstNumber = '';
+      secondNumber = '';
       ongoingOperation = [];
-      ongoingOperationChunk = [];
+      calcBigDisplay.style.fontSize = '42px';
       calcBigDisplay.innerText = '0';
       calcSmallDisplay.innerText = ongoingOperation;
     } else if (button.children[0].innerText !== ''){
-      // console.log('pushing from lower');
-      ongoingOperationChunk.push(button.children[0].innerText);
-      console.log('ongoingOperationChunk: ' + ongoingOperationChunk);
-      calcBigDisplay.innerText = ongoingOperationChunk.join('');
+      ongoingOperation.push(button.children[0].innerText);
+      calcBigDisplay.innerText = ongoingOperation.join('');
     }
-    
-  })
-}
-
-window.addEventListener("keydown", checkKeyPressed, false);
-
-function checkKeyPressed(evt) {
-    if (evt.keyCode == "13") {
-        alert("You pressed 'enter'.");
+  });
+  window.addEventListener('keydown', function (event) {
+    if (event.key === button.children[0].innerText) {
+      button.click();
     }
-}
+  });
+};
