@@ -39,6 +39,16 @@ let resultBtn = calculatorButtonWrapper.children[15];
 let percentBtn = calculatorButtonWrapper.children[16];
 let dotBtn = calculatorButtonWrapper.children[18];
 
+let resultWasPressed = false;
+
+function addZero(num) {
+  if (num[0] == '.') {
+    num.unshift('0');
+    return num;
+  }
+  return num;
+}
+
 
 function mathAction (numOne, operator, numTwo) {
   let result = eval(`${numOne} ${operator} ${numTwo}`);
@@ -51,9 +61,15 @@ function mathLogic(op) {
     operator = op;
   }
 
+  if (resultWasPressed == true) {
+    calcSmallDisplay.innerText = `${firstNumber} ${operator}`;
+    resultWasPressed = false;
+  }
+
   if (firstNumber == '') {
 
-    firstNumber = ongoingOperation.join('');
+
+    firstNumber = addZero(ongoingOperation).join('');
     operator = op;
     calcSmallDisplay.innerText = `${firstNumber} ${operator}`;
     ongoingOperation = [];
@@ -64,12 +80,15 @@ function mathLogic(op) {
       return;
     }
 
-    secondNumber = ongoingOperation.join('');
+    secondNumber = addZero(ongoingOperation).join('');
     let result = mathAction(firstNumber, operator, secondNumber);
     result.toFixed(5);
     result = parseFloat(result);
-    if (result.toString().length > 10) {
+    if (result.toString().length >= 10) {
       calcBigDisplay.style.fontSize = '30px';
+    }
+    if (result.toString().length > 15) {
+      calcBigDisplay.style.fontSize = '20px';
     }
     firstNumber = result;
     calcBigDisplay.innerText = result;
@@ -129,28 +148,37 @@ resultBtn.addEventListener('click', () => {
   }
 
   if (secondNumber == '') {
-    secondNumber = ongoingOperation.join('');
+    secondNumber = addZero(ongoingOperation).join('');
   }
 
   let result = mathAction(firstNumber, operator, secondNumber);
   result = result.toFixed(5);
   result = parseFloat(result);
-  if (result.toString().length > 10) {
+  if (result.toString().length >= 10) {
     calcBigDisplay.style.fontSize = '30px';
+  }
+  if (result.toString().length > 15) {
+    calcBigDisplay.style.fontSize = '20px';
   }
 
   calcBigDisplay.innerText = result;
   calcSmallDisplay.innerText = `${firstNumber} ${operator} ${secondNumber} = `;
+
   ongoingOperation = [];
   firstNumber = result;
   secondNumber = '';
   operator = '';
+
+  resultWasPressed = true;
+
 });
 window.addEventListener('keydown', function (event) {
   if (event.key === "=") {
     resultBtn.click();
   }
 });
+
+
 
 percentBtn.addEventListener('click', () => {
   secondNumber = ongoingOperation.join('');
@@ -189,6 +217,20 @@ for (let button of calculatorButtonWrapper.children) {
       calcBigDisplay.innerText = '0';
       calcSmallDisplay.innerText = ongoingOperation;
     } else if (button.children[0].innerText !== ''){
+      if (ongoingOperation.length > 9) {
+        return;
+      }
+      if (button.children[0].innerText == '0' && ongoingOperation.length == 1 && ongoingOperation[0] == 0) {
+        return;
+      }
+      if (resultWasPressed == true) {
+        calcBigDisplay.style.fontSize = '42px';
+        firstNumber = '';
+        secondNumber = '';
+        ongoingOperation = [];
+        calcSmallDisplay.innerText = '';
+        resultWasPressed = false;
+      }
       ongoingOperation.push(button.children[0].innerText);
       calcBigDisplay.innerText = ongoingOperation.join('');
     }
@@ -198,4 +240,5 @@ for (let button of calculatorButtonWrapper.children) {
       button.click();
     }
   });
+  resultWasPressed = false;
 };
