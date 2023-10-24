@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header section */
+header, .social {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social {
+    background-color: black;
+    color: white;
+}
+.social-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+nav ul{
+    margin: 1% 0;
+    padding: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    text-wrap: nowrap;
+}
+nav li {
+    list-style: none;
+}
+nav li:hover {
+    color: gold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.banner {
+    margin-top: 5%;
+    color: white;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.banner h1, .banner p {
+    margin: 0.5% 0;
+    text-shadow: 0 0 2px black;
+}
+
+/* MAIN SECTION */
+
+/* Services: */
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 70%;
+}
+.service {
+    margin-top: 1%;
+    padding: 2%;
+    font-size: 0.9em;
+    text-align: center;
+    width: 28%;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.244);
+}
+.service a {
+    text-align: right;
+    color: rgb(195, 166, 0);
+    text-decoration: none;
+}
+.read {
+    text-align: right;
+}
+.service-logo img{
+    width: 30%;
+    height: 30%;
+}
+
+.service:hover {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.653);
+}
+.service:hover a {
+    text-decoration: underline;
+}
