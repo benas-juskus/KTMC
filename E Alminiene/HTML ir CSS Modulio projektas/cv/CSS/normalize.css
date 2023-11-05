@@ -71,6 +71,73 @@
     }
 }
 
-@media screen and (max-width: 786px) {
-    
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+    }
+    nav {
+        width: 40%;
+        border-bottom: solid 1px grey;
+        border-right: solid 1px grey;
+        font-size: 1.5em;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.5em;
+    }
+    #login-panel {
+        /* visibility: visible; */
+        top: 85%;
+        left: 20%;
+        width: 350px;
+        padding: 1em;
+    }
+    .header-block {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    .name {
+        font-size: x-large;
+        width: 100%;
+        height: 50%;
+        border-bottom: solid 1px grey;
+    }
+    .contact-links {
+        height: 50%;
+        font-size: large;
+    }
+    .contact-list {
+        display: flex;
+        flex-direction: row;
+    }
+    .contact-list > * {
+        margin-right: 3em;
+    }
+    .contact-list a {
+        display: none;
+    }
+    .photo {
+        padding: 2em;
+        grid-column: span 3;
+    }
+    .photo img {
+        height: 100%;
+    }
+    .skills {
+        order: 3;
+        border-top: solid 1px grey;
+        grid-column: span 3;
+    }
+    .skills ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 10em;
+    }
+    .experience-detail {
+        width: 380px;
+        left: 80px;
+    }
 }

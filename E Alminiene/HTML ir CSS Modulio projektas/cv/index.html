@@ -1,286 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Resume</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
     <div class="container font-main">
-        <header>
-            <nav>
-                <ul class="info-container">
-                    <li><a class="hoverable" href="pages/about.html">About Me</a></li>
-                    <li><a class="hoverable" href="pages/skills.html">Skills</a></li>
-                    <li><a class="hoverable" href="pages/experience.html">Experience</a></li>
-                    <li><a class="hoverable" href="pages/comments.html">Comments</a></li>
-                    
-                    <li id="login">
-                      <div class="hoverable material-symbols-outlined">
-                        login
-                      </div>
-                      <div id="login-panel" class="more-info">
-                        <div>
-                          <label for="username">User:</label>
-                          <input type="text" id="username">
-                        </div>
-                        <div>
-                          <label for="password">Password:</label>
-                          <input type="password" id="password">
-                        </div>
-                        <div class="submit">
-                          <button><small class="hoverable">Log In</small></button>
-                        </div>
-                      </div>
-                    </li>
-                    
-                    
-                </ul>
-            </nav>
+      <header>
+        <nav>
+          <ul class="info-container">
+            <li><a class="hoverable" href="pages/about.html">About Me</a></li>
+            <li><a class="hoverable" href="pages/skills.html">Skills</a></li>
+            <li>
+              <a class="hoverable" href="pages/experience.html">Experience</a>
+            </li>
+            <li>
+              <a class="hoverable" href="pages/comments.html">Comments</a>
+            </li>
 
-            <div class="header-block">
-                <div class="name">
-                    <h1>Bill Gates</h1>
-                </div>
-
-                <div class="contact-links">
-
-                    <div>
-                      <h3>Get in touch:</h3>
-
-                      <div class="contact-list">
-                          <div id="phone">
-                            <i class="fa-solid fa-phone fa-xl"></i>
-                            <div id="phone-number">
-                              <a class="hoverable" href="tel:+37061234567">+37061234567</a>
-                            </div>
-                          </div>
-                          <div id="email">
-                            <i class="fa-regular fa-envelope fa-xl"></i>
-                            <div id="email-address">
-                              <a class="hoverable" href="mailto:bill.gates@microsoft.com">bill.gates@microsoft.com</a>
-                            </div>
-                          </div>
-                          <div id="linkedin">
-                            <i class="fa-brands fa-linkedin fa-xl"></i>
-                            <div id="linkedin-address">
-                              <a class="hoverable" target="_blank" href="https://www.linkedin.com/in/williamhgates/">William H. Gates</a>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3>See my work:</h3>
-                      <div class="work-list">
-                        <div id="github">
-                          <i class="hoverable fa-brands fa-github fa-xl"></i>
-                          <div id="github-address">
-                            <a class="hoverable" target="_blank" href="https://github.com/gatesfoundation">Bill & Melinda Gates Foundation</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  
-                </div>
-            </div>
-        </header>
-
-        <main>
-
-            <section class="photo bg-hoverable">
-                <img src="IMG/profile/gates.jpg" alt="">
-            </section>
-
-            <section id="about-me" class="about-me bg-hoverable">
-                <h2><a class="hoverable" href="pages/about.html">About me:</a></h2>
-                <p>I'm Bill Gates, an entrepreneur, technologist, and philanthropist. With a foundational role in co-founding Microsoft, I've dedicated my life to harnessing the potential of technology to reshape the world. As the former CEO of Microsoft, I steered the company towards becoming a global leader in software, revolutionizing the way people work and connect.</p>
-                <p>Beyond my career in technology, my deep commitment to global progress led to the establishment of the Bill and Melinda Gates Foundation. Through the foundation, I've channeled my passion for addressing critical global issues, including healthcare, poverty, and education, making a substantial impact on a global scale.</p>
-                <p>My journey is guided by a relentless pursuit of innovation and a belief in the transformative power of information technology. It's my enduring commitment to making a positive difference in the world that continues to drive my work, combining technology, business acumen, and philanthropy to create a more equitable and promising future for all.</p>
-            </section>
-
-            <section class="experience bg-hoverable">
-                <h2 id="experience-title"><a class="hoverable" href="pages/experience.html">Experience:</a></h2>
-                <ul>
-                    <li id="item1" class="info-container hoverable">
-                      <strong>Co-Chair & Trustee, Bill and Melinda Gates Foundation</strong>
-                      <div id="item1content" class="experience-detail more-info">
-                        <p>
-                          As Co-Chair and Trustee of the Bill and Melinda Gates Foundation, I've had the privilege of leading one of the world's largest and most influential philanthropic organizations. In this capacity, I've played a pivotal role in setting the foundation's strategic priorities, focusing on global challenges such as healthcare, education, and poverty reduction. Through our initiatives, we've made significant strides in improving global health, advancing education, and empowering underprivileged communities.
-                        </p>
-                      </div>
-                      <ul>
-                        <li><em>Role:</em> Co-led the foundation's efforts to address global challenges in health, education, and poverty.</li>
-                        <li><em>Timeframe:</em> January 2000 - Present</li>
-                      </ul>
-                    </li>
-                  
-                    <li id="item2" class="info-container hoverable">
-                      <strong>Technology Advisor, Microsoft Corporation</strong>
-                      <div id="item2content" class="experience-detail more-info">
-                        <p>
-                          My role as a Technology Advisor at Microsoft has allowed me to stay closely connected to the company I co-founded. I've provided strategic guidance and insights to Microsoft, sharing my thoughts on technology trends, industry developments, and long-term strategy. This advisory position has enabled me to contribute to Microsoft's ongoing innovation and commitment to shaping the future of technology.
-                        </p>
-                      </div>
-                      <ul>
-                        <li><em>Role:</em> Provided strategic guidance and insights to Microsoft, the company he co-founded.</li>
-                        <li><em>Timeframe:</em> June 2006 - Present</li>
-                      </ul>
-                    </li>
-                  
-                    <li id="item3" class="info-container hoverable">
-                      <strong>Breakthrough Energy Ventures, Chairman</strong>
-                      <div id="item3content" class="experience-detail more-info">
-                        <p>
-                          As the Chairman of Breakthrough Energy Ventures, I've had the privilege of leading a coalition of forward-thinking investors committed to addressing climate change through innovative clean energy technologies. Our mission is to identify and support groundbreaking solutions that can accelerate the transition to a low-carbon, sustainable future. By investing in cutting-edge technologies and businesses with the potential to make a significant environmental impact, we aim to combat climate change on a global scale.
-                        </p>
-                      </div>
-                      <ul>
-                        <li><em>Role:</em> Led a coalition of investors to fund and support innovations in clean energy technology.</li>
-                        <li><em>Timeframe:</em> December 2015 - Present</li>
-                      </ul>
-                    </li>
-                  
-                    <li id="item4" class="info-container hoverable">
-                      <strong>COVID-19 Response and Philanthropy</strong>
-                      <div id="item4content" class="experience-detail more-info">
-                        <p>
-                          In response to the COVID-19 pandemic, I launched a series of philanthropic initiatives aimed at addressing the global health crisis. These efforts included funding research for COVID-19 vaccines, treatments, and diagnostics, as well as supporting equitable vaccine distribution to ensure that people worldwide have access to these life-saving tools. My commitment to public health and philanthropy led to a significant impact in the global fight against COVID-19.
-                        </p>
-                      </div>
-                      <ul>
-                        <li><em>Role:</em> Launched multiple initiatives to address the global COVID-19 pandemic, including funding vaccine research and distribution.</li>
-                        <li><em>Timeframe:</em> March 2020 - Present</li>
-                      </ul>
-                    </li>
-                  
-                    <li id="item5" class="info-container hoverable">
-                      <strong>Global Health and Education Advocacy</strong>
-                      <div id="item5content" class="experience-detail more-info">
-                        <p>
-                          Advocating for global health and education has been a longstanding passion of mine. I've been actively engaged in initiatives aimed at improving healthcare systems, expanding access to life-saving vaccines, and enhancing educational opportunities for people around the world. My goal has been to address disparities in health outcomes and promote education as a means to empower individuals and communities, ultimately contributing to a brighter and more equitable future.
-                        </p>
-                      </div>
-                      <ul>
-                        <li><em>Role:</em> Advocated for and supported global efforts to improve healthcare and education access.</li>
-                        <li><em>Timeframe:</em> Ongoing</li>
-                      </ul>
-                    </li>
-                  </ul>
-                  
-            </section>
-
-            <section class="skills bg-hoverable">
-                <h2><a class="hoverable" href="pages/skills.html">Skills:</a></h2>
-                <ul>
-                    <li><strong>Hard Skills:</strong>
-                      <ul>
-                        <li>Technology Leadership</li>
-                        <li>Innovation</li>
-                        <li>Business Acumen</li>
-                        <li>Data-Driven Decision-Making</li>
-                        <li>Global Health Expertise</li>
-                        <li>Education Advocacy</li>
-                        <li>Financial Management</li>
-                      </ul>
-                    </li>
-                    <br>
-                    <li><strong>Soft Skills:</strong>
-                      <ul>
-                        <li>Strategic Vision</li>
-                        <li>Entrepreneurship</li>
-                        <li>Problem-Solving</li>
-                        <li>Public Speaking</li>
-                        <li>Team Leadership</li>
-                        <li>Networking</li>
-                        <li>Collaboration</li>
-                      </ul>
-                    </li>
-                  </ul>
-                  
-            </section>
-
-            <div id="input-comment" class="input-comment bg-hoverable">
-                <h2>Comment:</h2>
+            <li id="login">
+              <div class="hoverable material-symbols-outlined">login</div>
+              <div id="login-panel" class="more-info">
                 <div>
-                    <div class="name-input">
-                        <label for="name">Your name:</label>
-                        <input type="text" id="name">
-                    </div>
-                    <div class="email-input">
-                        <label for="email">Your email:</label>
-                        <input type="text" id="email">
-                    </div>
+                  <label for="username">User:</label>
+                  <input type="text" id="username" />
                 </div>
-                <div class="message-input">
-                    <label for="message">Your comment:</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <div>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" />
                 </div>
                 <div class="submit">
-                  <button class="font-main hoverable">Submit</button>
+                  <button><small class="hoverable">Log In</small></button>
                 </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-block">
+          <div class="name">
+            <h1>Bill Gates</h1>
+          </div>
+
+          <div class="contact-links">
+            <div>
+              <h3>Get in touch:</h3>
+
+              <div class="contact-list">
+                <div id="phone">
+                  <i class="hoverable fa-solid fa-phone fa-xl"></i>
+                  <div id="phone-number">
+                    <a class="hoverable" href="tel:+37061234567">+37061234567</a>
+                  </div>
+                </div>
+                <div id="email">
+                  <i class="hoverable fa-regular fa-envelope fa-xl"></i>
+                  <div id="email-address">
+                    <a class="hoverable" href="mailto:bill.gates@microsoft.com"
+                      >bill.gates@microsoft.com</a
+                    >
+                  </div>
+                </div>
+                <div id="linkedin">
+                  <i class="hoverable fa-brands fa-linkedin fa-xl"></i>
+                  <div id="linkedin-address">
+                    <a
+                      class="hoverable"
+                      target="_blank"
+                      href="https://www.linkedin.com/in/williamhgates/"
+                      >William H. Gates</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="other-comments bg-hoverable">
-
-                <h2>Other peoples comments:</h2>
-                <div class="comment-wrapper">
-
-                  <div class="comment">
-                    <small>09/17/2023: 19:41</small>
-                    <h4>Iron Man:</h4>
-                    <div>
-                        <img src="https://www.pngall.com/wp-content/uploads/5/Iron-Man-Tony-Stark-PNG-Free-Image.png" alt="user_image">
-                        <p>Working alongside Bill Gates was like joining forces with a tech genius on a global mission. We shared a common goal to use innovation for the greater good. While I may have the suits and gadgets, Bill's work with the Gates Foundation is like a real-life superhero endeavor, making a tangible impact on the world's most pressing issues. It was an electrifying collaboration, and I tip my helmet to his philanthropic dedication.</p>
-                    </div>
+            <div>
+              <h3>See my work:</h3>
+              <div class="work-list">
+                <div id="github">
+                  <i class="hoverable fa-brands fa-github fa-xl"></i>
+                  <div id="github-address">
+                    <a
+                      class="hoverable"
+                      target="_blank"
+                      href="https://github.com/gatesfoundation"
+                      >Bill & Melinda Gates Foundation</a
+                    >
                   </div>
-
-                  <div class="comment">
-                    <small>11/03/2022: 19:41</small>
-                    <h4>Pee Wee Herman:</h4>
-                    <div>
-                        <img src="https://media.npr.org/assets/artslife/arts/2010/11/pee-wee-herman/pee-wee-herman-9bc67bd8f86cb58dd95dd55741e2f0267ea2200c-s1100-c50.jpg" alt="user_image">
-                        <p>Working with Bill Gates was, like, totally awesome, you know? I mean, he's like a computer wizard, and I love gadgets! We may be from different worlds, but Bill's commitment to making the world better is, like, super cool. It was kind of like riding my bike through a virtual wonderland, and I couldn't stop smiling the whole time!</p>
-                    </div>
-                  </div>
-
-                  <div class="comment">
-                    <small>12/01/2020: 19:41</small>
-                    <h4>Drew Berrymore:</h4>
-                    <div>
-                        <img src="https://img.nbc.com/sites/nbcunbc/files/images/2017/4/13/DrewBarrymore_revised.jpg" alt="user_image">
-                        <p>Working with Bill Gates was an incredible experience. His passion for technology and philanthropy is truly inspiring, and his dedication to making the world a better place is infectious. It was an honor to collaborate with someone so brilliant and committed to positive change on a global scale.</p>
-                    </div>
-                  </div>
-
-                  <div class="comment">
-                    <small>18/08/2018: 19:41</small>
-                    <h4>Steve Jobs:</h4>
-                    <div>
-                        <img src="https://anthillonline.com/wp-content/uploads/2016/03/steve-jobs.jpg" alt="user_image">
-                        <p>Collaborating with Bill Gates was certainly a unique experience. While we had our differences, particularly when it came to our approach to technology, there's no denying his impact on the industry. His commitment to philanthropy is commendable, but our contrasting philosophies often led to intense discussions. It was an interesting journey, to say the least.</p>
-                    </div>
-                  </div>
-
                 </div>
-                <div class="more submit">
-                  <button class="font-main"><a class="hoverable" href="pages/comments.html">See all</a></button>
-                </div>
-
+              </div>
             </div>
-               
-     
-        </main>
+          </div>
+        </div>
+      </header>
 
-        <footer>
-          <p>© Benas Juškus ||</p>
-          <img src="IMG/KTMC-logo-mobil.png" alt="KTMC">
-        </footer>
+      <main>
+        <section class="photo bg-hoverable">
+          <img src="IMG/profile/gates.jpg" alt="" />
+        </section>
+
+        <section id="about-me" class="about-me bg-hoverable">
+          <h2><a class="hoverable" href="pages/about.html">About me:</a></h2>
+          <p>
+            I'm Bill Gates, an entrepreneur, technologist, and philanthropist.
+            With a foundational role in co-founding Microsoft, I've dedicated my
+            life to harnessing the potential of technology to reshape the world.
+            As the former CEO of Microsoft, I steered the company towards
+            becoming a global leader in software, revolutionizing the way people
+            work and connect.
+          </p>
+          <p>
+            Beyond my career in technology, my deep commitment to global
+            progress led to the establishment of the Bill and Melinda Gates
+            Foundation. Through the foundation, I've channeled my passion for
+            addressing critical global issues, including healthcare, poverty,
+            and education, making a substantial impact on a global scale.
+          </p>
+          <p>
+            My journey is guided by a relentless pursuit of innovation and a
+            belief in the transformative power of information technology. It's
+            my enduring commitment to making a positive difference in the world
+            that continues to drive my work, combining technology, business
+            acumen, and philanthropy to create a more equitable and promising
+            future for all.
+          </p>
+        </section>
+
+        <section class="experience bg-hoverable">
+          <h2 id="experience-title">
+            <a class="hoverable" href="pages/experience.html">Experience:</a>
+          </h2>
+          <ul>
+            <li id="item1" class="info-container hoverable">
+              <strong
+                >Co-Chair & Trustee, Bill and Melinda Gates Foundation</strong
+              >
+              <div id="item1content" class="experience-detail more-info">
+                <p>
+                  As Co-Chair and Trustee of the Bill and Melinda Gates
+                  Foundation, I've had the privilege of leading one of the
+                  world's largest and most influential philanthropic
+                  organizations. In this capacity, I've played a pivotal role in
+                  setting the foundation's strategic priorities, focusing on
+                  global challenges such as healthcare, education, and poverty
+                  reduction. Through our initiatives, we've made significant
+                  strides in improving global health, advancing education, and
+                  empowering underprivileged communities.
+                </p>
+              </div>
+              <ul>
+                <li>
+                  <em>Role:</em> Co-led the foundation's efforts to address
+                  global challenges in health, education, and poverty.
+                </li>
+                <li><em>Timeframe:</em> January 2000 - Present</li>
+              </ul>
+            </li>
+
+            <li id="item2" class="info-container hoverable">
+              <strong>Technology Advisor, Microsoft Corporation</strong>
+              <div id="item2content" class="experience-detail more-info">
+                <p>
+                  My role as a Technology Advisor at Microsoft has allowed me to
+                  stay closely connected to the company I co-founded. I've
+                  provided strategic guidance and insights to Microsoft, sharing
+                  my thoughts on technology trends, industry developments, and
+                  long-term strategy. This advisory position has enabled me to
+                  contribute to Microsoft's ongoing innovation and commitment to
+                  shaping the future of technology.
+                </p>
+              </div>
+              <ul>
+                <li>
+                  <em>Role:</em> Provided strategic guidance and insights to
+                  Microsoft, the company he co-founded.
+                </li>
+                <li><em>Timeframe:</em> June 2006 - Present</li>
+              </ul>
+            </li>
+
+            <li id="item3" class="info-container hoverable">
+              <strong>Breakthrough Energy Ventures, Chairman</strong>
+              <div id="item3content" class="experience-detail more-info">
+                <p>
+                  As the Chairman of Breakthrough Energy Ventures, I've had the
+                  privilege of leading a coalition of forward-thinking investors
+                  committed to addressing climate change through innovative
+                  clean energy technologies. Our mission is to identify and
+                  support groundbreaking solutions that can accelerate the
+                  transition to a low-carbon, sustainable future. By investing
+                  in cutting-edge technologies and businesses with the potential
+                  to make a significant environmental impact, we aim to combat
+                  climate change on a global scale.
+                </p>
+              </div>
+              <ul>
+                <li>
+                  <em>Role:</em> Led a coalition of investors to fund and
+                  support innovations in clean energy technology.
+                </li>
+                <li><em>Timeframe:</em> December 2015 - Present</li>
+              </ul>
+            </li>
+
+            <li id="item4" class="info-container hoverable">
+              <strong>COVID-19 Response and Philanthropy</strong>
+              <div id="item4content" class="experience-detail more-info">
+                <p>
+                  In response to the COVID-19 pandemic, I launched a series of
+                  philanthropic initiatives aimed at addressing the global
+                  health crisis. These efforts included funding research for
+                  COVID-19 vaccines, treatments, and diagnostics, as well as
+                  supporting equitable vaccine distribution to ensure that
+                  people worldwide have access to these life-saving tools. My
+                  commitment to public health and philanthropy led to a
+                  significant impact in the global fight against COVID-19.
+                </p>
+              </div>
+              <ul>
+                <li>
+                  <em>Role:</em> Launched multiple initiatives to address the
+                  global COVID-19 pandemic, including funding vaccine research
+                  and distribution.
+                </li>
+                <li><em>Timeframe:</em> March 2020 - Present</li>
+              </ul>
+            </li>
+
+            <li id="item5" class="info-container hoverable">
+              <strong>Global Health and Education Advocacy</strong>
+              <div id="item5content" class="experience-detail more-info">
+                <p>
+                  Advocating for global health and education has been a
+                  longstanding passion of mine. I've been actively engaged in
+                  initiatives aimed at improving healthcare systems, expanding
+                  access to life-saving vaccines, and enhancing educational
+                  opportunities for people around the world. My goal has been to
+                  address disparities in health outcomes and promote education
+                  as a means to empower individuals and communities, ultimately
+                  contributing to a brighter and more equitable future.
+                </p>
+              </div>
+              <ul>
+                <li>
+                  <em>Role:</em> Advocated for and supported global efforts to
+                  improve healthcare and education access.
+                </li>
+                <li><em>Timeframe:</em> Ongoing</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section class="skills bg-hoverable">
+          <h2><a class="hoverable" href="pages/skills.html">Skills:</a></h2>
+          <ul>
+            <li>
+              <strong>Hard Skills:</strong>
+              <ul>
+                <li>Technology Leadership</li>
+                <li>Innovation</li>
+                <li>Business Acumen</li>
+                <li>Data-Driven Decision-Making</li>
+                <li>Global Health Expertise</li>
+                <li>Education Advocacy</li>
+                <li>Financial Management</li>
+              </ul>
+            </li>
+            <br />
+            <li>
+              <strong>Soft Skills:</strong>
+              <ul>
+                <li>Strategic Vision</li>
+                <li>Entrepreneurship</li>
+                <li>Problem-Solving</li>
+                <li>Public Speaking</li>
+                <li>Team Leadership</li>
+                <li>Networking</li>
+                <li>Collaboration</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <div id="input-comment" class="input-comment bg-hoverable">
+          <h2>Comment:</h2>
+          <div>
+            <div class="name-input">
+              <label for="name">Your name:</label>
+              <input type="text" id="name" />
+            </div>
+            <div class="email-input">
+              <label for="email">Your email:</label>
+              <input type="text" id="email" />
+            </div>
+          </div>
+          <div class="message-input">
+            <label for="message">Your comment:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="submit">
+            <button class="font-main hoverable">Submit</button>
+          </div>
+        </div>
+
+        <div class="other-comments bg-hoverable">
+          <h2>Other peoples comments:</h2>
+          <div class="comment-wrapper">
+            <div class="comment">
+              <small>09/17/2023: 19:41</small>
+              <h4>Iron Man:</h4>
+              <div>
+                <img
+                  src="https://www.pngall.com/wp-content/uploads/5/Iron-Man-Tony-Stark-PNG-Free-Image.png"
+                  alt="user_image"
+                />
+                <p>
+                  Working alongside Bill Gates was like joining forces with a
+                  tech genius on a global mission. We shared a common goal to
+                  use innovation for the greater good. While I may have the
+                  suits and gadgets, Bill's work with the Gates Foundation is
+                  like a real-life superhero endeavor, making a tangible impact
+                  on the world's most pressing issues. It was an electrifying
+                  collaboration, and I tip my helmet to his philanthropic
+                  dedication.
+                </p>
+              </div>
+            </div>
+
+            <div class="comment">
+              <small>11/03/2022: 19:41</small>
+              <h4>Pee Wee Herman:</h4>
+              <div>
+                <img
+                  src="https://media.npr.org/assets/artslife/arts/2010/11/pee-wee-herman/pee-wee-herman-9bc67bd8f86cb58dd95dd55741e2f0267ea2200c-s1100-c50.jpg"
+                  alt="user_image"
+                />
+                <p>
+                  Working with Bill Gates was, like, totally awesome, you know?
+                  I mean, he's like a computer wizard, and I love gadgets! We
+                  may be from different worlds, but Bill's commitment to making
+                  the world better is, like, super cool. It was kind of like
+                  riding my bike through a virtual wonderland, and I couldn't
+                  stop smiling the whole time!
+                </p>
+              </div>
+            </div>
+
+            <div class="comment">
+              <small>12/01/2020: 19:41</small>
+              <h4>Drew Berrymore:</h4>
+              <div>
+                <img
+                  src="https://img.nbc.com/sites/nbcunbc/files/images/2017/4/13/DrewBarrymore_revised.jpg"
+                  alt="user_image"
+                />
+                <p>
+                  Working with Bill Gates was an incredible experience. His
+                  passion for technology and philanthropy is truly inspiring,
+                  and his dedication to making the world a better place is
+                  infectious. It was an honor to collaborate with someone so
+                  brilliant and committed to positive change on a global scale.
+                </p>
+              </div>
+            </div>
+
+            <div class="comment">
+              <small>18/08/2018: 19:41</small>
+              <h4>Steve Jobs:</h4>
+              <div>
+                <img
+                  src="https://anthillonline.com/wp-content/uploads/2016/03/steve-jobs.jpg"
+                  alt="user_image"
+                />
+                <p>
+                  Collaborating with Bill Gates was certainly a unique
+                  experience. While we had our differences, particularly when it
+                  came to our approach to technology, there's no denying his
+                  impact on the industry. His commitment to philanthropy is
+                  commendable, but our contrasting philosophies often led to
+                  intense discussions. It was an interesting journey, to say the
+                  least.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="more submit">
+            <button class="font-main">
+              <a class="hoverable" href="pages/comments.html">See all</a>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>© Benas Juškus ||</p>
+        <img src="IMG/KTMC-logo-mobil.png" alt="KTMC" />
+      </footer>
     </div>
-    <script src="https://kit.fontawesome.com/056a003364.js" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/056a003364.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

@@ -1,117 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Resume</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/normalize.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-</head>
-<body>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
     <div class="container font-main">
-        <header>
-            <nav>
-                <ul class="info-container">
-                    <li ><a class="hoverable" href="../index.html">Home</a></li>
-                    <li ><a class="hoverable" href="skills.html">Skills</a></li>
-                    <li ><a class="hoverable" href="experience.html">Experience</a></li>
-                    <li><a class="hoverable" href="comments.html">Comments</a></li>
-                    <li id="login">
-                      <div class="hoverable material-symbols-outlined">
-                        login
-                      </div>
-                      <div id="login-panel" class="more-info">
-                        <div>
-                          <label for="username">User:</label>
-                          <input type="text" id="username">
-                        </div>
-                        <div>
-                          <label for="password">Password:</label>
-                          <input type="password" id="password">
-                        </div>
-                        <div class="submit">
-                          <button><small class="hoverable">Log In</small></button>
-                        </div>
-                      </div>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="header-block">
-                <div class="name">
-                    <h1>Bill Gates</h1>
+      <header>
+        <nav>
+          <ul class="info-container">
+            <li><a class="hoverable" href="../index.html">Home</a></li>
+            <li><a class="hoverable" href="skills.html">Skills</a></li>
+            <li><a class="hoverable" href="experience.html">Experience</a></li>
+            <li><a class="hoverable" href="comments.html">Comments</a></li>
+            <li id="login">
+              <div class="hoverable material-symbols-outlined">login</div>
+              <div id="login-panel" class="more-info">
+                <div>
+                  <label for="username">User:</label>
+                  <input type="text" id="username" />
                 </div>
+                <div>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" />
+                </div>
+                <div class="submit">
+                  <button><small class="hoverable">Log In</small></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
 
-                     <div class="contact-links">
+        <div class="header-block">
+          <div class="name">
+            <h1>Bill Gates</h1>
+          </div>
 
-                      <div>
-                        <h3>Get in touch:</h3>
-  
-                        <div class="contact-list">
-                            <div id="phone">
-                              <i class="fa-solid fa-phone fa-xl"></i>
-                              <div id="phone-number">
-                                <a class="hoverable" href="tel:+37061234567">+37061234567</a>
-                              </div>
-                            </div>
-                            <div id="email">
-                              <i class="fa-regular fa-envelope fa-xl"></i>
-                              <div id="email-address">
-                                <a class="hoverable" href="mailto:bill.gates@microsoft.com">bill.gates@microsoft.com</a>
-                              </div>
-                            </div>
-                            <div id="linkedin">
-                              <i class="fa-brands fa-linkedin fa-xl"></i>
-                              <div id="linkedin-address">
-                                <a class="hoverable" target="_blank" href="https://www.linkedin.com/in/williamhgates/">William H. Gates</a>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-  
-                      <div>
-                        <h3>See my work:</h3>
-                        <div class="work-list">
-                          <div id="github">
-                            <i class="hoverable fa-brands fa-github fa-xl"></i>
-                            <div id="github-address">
-                              <a class="hoverable" target="_blank" href="https://github.com/gatesfoundation">Bill & Melinda Gates Foundation</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-  
-                    
+          <div class="contact-links">
+            <div>
+              <h3>Get in touch:</h3>
+
+              <div class="contact-list">
+                <div id="phone">
+                  <i class="hoverable fa-solid fa-phone fa-xl"></i>
+                  <div id="phone-number">
+                    <a class="hoverable" href="tel:+37061234567"
+                      >+37061234567</a
+                    >
                   </div>
+                </div>
+                <div id="email">
+                  <i class="hoverable fa-regular fa-envelope fa-xl"></i>
+                  <div id="email-address">
+                    <a class="hoverable" href="mailto:bill.gates@microsoft.com"
+                      >bill.gates@microsoft.com</a
+                    >
+                  </div>
+                </div>
+                <div id="linkedin">
+                  <i class="hoverable fa-brands fa-linkedin fa-xl"></i>
+                  <div id="linkedin-address">
+                    <a
+                      class="hoverable"
+                      target="_blank"
+                      href="https://www.linkedin.com/in/williamhgates/"
+                      >William H. Gates</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-        </header>
 
-        <main>
-
-            <div class="gallery bg-hoverable">
-                <img src="../IMG/profile/young.jpg" alt="">
-                <img src="../IMG/profile/smug.jpg" alt="">
-                <img src="../IMG/profile/withdog.jpg" alt="">
+            <div>
+              <h3>See my work:</h3>
+              <div class="work-list">
+                <div id="github">
+                  <i class="hoverable fa-brands fa-github fa-xl"></i>
+                  <div id="github-address">
+                    <a
+                      class="hoverable"
+                      target="_blank"
+                      href="https://github.com/gatesfoundation"
+                      >Bill & Melinda Gates Foundation</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </header>
 
-            <div id="about-me" class="about-me bg-hoverable">
-                <h2>About me:</h2>
-                <p>I am Bill Gates, a visionary entrepreneur, philanthropist, and technology pioneer, driven by a passion for innovation and a commitment to making a positive impact on the world. With a lifelong fascination for the limitless potential of technology, I co-founded Microsoft in 1975, which went on to become a global tech giant and leader in software development. Under my leadership as CEO, Microsoft revolutionized the way people work, communicate, and connect.</p>
-                <p>My journey in the tech industry has been defined by a relentless pursuit of excellence, a dedication to creating user-friendly software, and an unwavering belief in the power of information technology to drive progress. This journey has not only shaped my career but also transformed the way people live, work, and interact in the digital age.</p>
-                <p>Beyond the realm of technology, my passion for addressing global challenges has led me to establish the Bill and Melinda Gates Foundation, one of the world's largest and most influential philanthropic organizations. Through the foundation, I have been deeply committed to tackling issues such as global health, poverty alleviation, and education reform. My philanthropic efforts have touched the lives of countless individuals and communities around the world.</p>
-                <p>Throughout my career, I have strived to combine innovation, business acumen, and a deep sense of social responsibility. My dedication to the values of learning, curiosity, and creativity has continually inspired me to push the boundaries of what is possible, whether in the world of technology or in the realm of global well-being.</p>
-                <p>As I continue to be actively involved in philanthropy and the pursuit of sustainable solutions to some of the world's most pressing problems, I remain deeply committed to shaping a brighter and more equitable future for all. My journey is one of continuous exploration and a commitment to improving the human condition through the strategic application of knowledge, resources, and innovation.</p>
-                <p>Thank you for considering my qualifications and the impact I have made on the fields of technology and philanthropy. I look forward to opportunities where I can contribute my expertise and resources to drive positive change in our interconnected world.</p>
-            </div>
-        </main>
+      <main>
+        <div class="gallery bg-hoverable">
+          <img src="../IMG/profile/young.jpg" alt="" />
+          <img src="../IMG/profile/smug.jpg" alt="" />
+          <img src="../IMG/profile/withdog.jpg" alt="" />
+        </div>
 
-        <footer>
-          <p>© Benas Juškus ||</p>
-          <img src="../IMG/KTMC-logo-mobil.png" alt="KTMC">
-        </footer>
+        <div id="about-me" class="about-me bg-hoverable">
+          <h2>About me:</h2>
+          <p>
+            I am Bill Gates, a visionary entrepreneur, philanthropist, and
+            technology pioneer, driven by a passion for innovation and a
+            commitment to making a positive impact on the world. With a lifelong
+            fascination for the limitless potential of technology, I co-founded
+            Microsoft in 1975, which went on to become a global tech giant and
+            leader in software development. Under my leadership as CEO,
+            Microsoft revolutionized the way people work, communicate, and
+            connect.
+          </p>
+          <p>
+            My journey in the tech industry has been defined by a relentless
+            pursuit of excellence, a dedication to creating user-friendly
+            software, and an unwavering belief in the power of information
+            technology to drive progress. This journey has not only shaped my
+            career but also transformed the way people live, work, and interact
+            in the digital age.
+          </p>
+          <p>
+            Beyond the realm of technology, my passion for addressing global
+            challenges has led me to establish the Bill and Melinda Gates
+            Foundation, one of the world's largest and most influential
+            philanthropic organizations. Through the foundation, I have been
+            deeply committed to tackling issues such as global health, poverty
+            alleviation, and education reform. My philanthropic efforts have
+            touched the lives of countless individuals and communities around
+            the world.
+          </p>
+          <p>
+            Throughout my career, I have strived to combine innovation, business
+            acumen, and a deep sense of social responsibility. My dedication to
+            the values of learning, curiosity, and creativity has continually
+            inspired me to push the boundaries of what is possible, whether in
+            the world of technology or in the realm of global well-being.
+          </p>
+          <p>
+            As I continue to be actively involved in philanthropy and the
+            pursuit of sustainable solutions to some of the world's most
+            pressing problems, I remain deeply committed to shaping a brighter
+            and more equitable future for all. My journey is one of continuous
+            exploration and a commitment to improving the human condition
+            through the strategic application of knowledge, resources, and
+            innovation.
+          </p>
+          <p>
+            Thank you for considering my qualifications and the impact I have
+            made on the fields of technology and philanthropy. I look forward to
+            opportunities where I can contribute my expertise and resources to
+            drive positive change in our interconnected world.
+          </p>
+        </div>
+      </main>
 
+      <footer>
+        <p>© Benas Juškus ||</p>
+        <img src="../IMG/KTMC-logo-mobil.png" alt="KTMC" />
+      </footer>
     </div>
-    <script src="https://kit.fontawesome.com/056a003364.js" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/056a003364.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
