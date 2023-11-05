@@ -10,6 +10,8 @@ body {
     background: #780206;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-repeat: none;
     color: white;
 }
 
@@ -150,6 +152,9 @@ main > * {
     padding: 1.5em 3em;
 }
 .photo {
+    display: flex;
+    align-items: center;
+    /* height: 25em; */
     padding: 4em;
     border-right: solid 1px grey;
 }
@@ -165,12 +170,25 @@ main > * {
 .about-me:focus {
     background-color: #80808070;
 }
+.gallery {
+    height: 50em;
+}
+.gallery img {
+    margin-bottom: 2%;
+    height: 30%;
+    width: 100%;
+    object-fit: cover;
+    border: solid 1px grey;
+}
 .skills {
     border: solid 1px #808080;
     border-right: none;
     border-left: none;
 }
 .skills-full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-column: span 3;
 }
 .skills-list {
@@ -212,6 +230,13 @@ main > * {
     grid-column: span 2;
     width: 90%;
 }
+.other-comments .full {
+    max-height: 80vh;
+}
+.more {
+    margin-top: 5%;
+}
+
 .comment-wrapper {
     max-height: 300px;
     overflow-x: hidden;
@@ -286,4 +311,9 @@ footer {
     padding: 5% 0;
     width: 100%;
     max-width: 1400px;
+}
+footer img {
+    height: 2em;
+    padding-top: 0.65em;
+    padding-left: 0.5em;
 }

@@ -1,0 +1,76 @@
+@media screen and (max-width: 1250px) {
+    .contact-links {
+        width: 70%;
+    }
+    .photo {
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    nav ul {
+        width: 100%;
+    }
+    .name {
+        padding: 0;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-links {
+        padding-left: 5%;
+        flex-direction: column;
+        width: 60%;
+    }
+    .photo {
+        padding: 0 4em;
+        order: 2;
+        grid-column: span 2;
+    }
+    .photo img {
+        height: 30em;
+    }
+    .about-me {
+        grid-column: span 3;
+        order: 1;
+        border-bottom: solid 1px grey;
+    }
+    .gallery {
+        height: auto;
+        grid-column: span 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .gallery img {
+        margin-bottom: 2%;
+        width: 30%;
+        height: auto;
+        object-fit: cover;
+        border: solid 1px grey;
+    }
+    .skills {
+        order: 3;
+        border: none;
+    }
+    .experience {
+      order: 4;
+      grid-column: span 3;
+    }
+    .experience-detail {
+        left: 180px;
+    }
+    .other-comments {
+        order: 4;
+        grid-column: span 3;
+    }
+    .input-comment {
+        order: 5;
+        grid-column: span 3;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    
+}
