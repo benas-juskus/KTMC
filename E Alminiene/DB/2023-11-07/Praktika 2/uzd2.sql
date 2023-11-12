@@ -1,0 +1,106 @@
+-- uzduotis 1
+
+SELECT `ASMENSKODAS`, `VARDAS`, `PAVARDE` 
+FROM `darbuotojai` 
+WHERE `GIMIMOMETAI` = '1988-06-15';
+
+-- uzduotis 2
+
+SELECT * FROM `darbuotojai` WHERE `GIMIMOMETAI` < '1988-07-29';
+
+-- uzduotis 3
+
+SELECT `DIRBANUO`, `GIMIMOMETAI` 
+FROM `darbuotojai` 
+WHERE `DIRBANUO` 
+BETWEEN '2000-10-30' AND '2012-11-10';
+
+-- uzduotis 4
+
+SELECT `VARDAS`, `SKYRIAUSPAVADINIMAS`, `PROJEKTONUMERIS` 
+FROM `darbuotojai` 
+WHERE `PROJEKTONUMERIS` 
+IN (2,3);
+
+-- uzduotis 5
+
+SELECT `VARDAS`, `PAVARDE`, `ASMENSKODAS` FROM `darbuotojai` 
+WHERE `ASMENSKODAS` LIKE '4%';
+
+-- uzduotis 6
+
+SELECT * FROM `darbuotojai` 
+WHERE `GIMIMOMETAI` LIKE '%12';
+
+-- uzduotis 7
+
+SELECT * FROM `darbuotojai` 
+WHERE `SKYRIAUSPAVADINIMAS` LIKE '__u%';
+
+-- uzduotis 8
+
+SELECT * FROM `darbuotojai` 
+WHERE `PAREIGOS` IS NULL;
+
+-- uzduotis 9
+
+SELECT `VARDAS`, `PAVARDE`, `DIRBANUO`, `PAREIGOS`
+FROM `darbuotojai`
+WHERE `DIRBANUO` > '2010-08-01'
+AND `PAREIGOS` = 'Programuotojas';
+
+-- uzduotis 10
+
+SELECT `VARDAS`,`PAVARDE`, `SKYRIAUSPAVADINIMAS`, `PROJEKTONUMERIS` 
+FROM `darbuotojai` 
+WHERE `SKYRIAUSPAVADINIMAS` = 'Mazai dirbantys'
+OR `PROJEKTONUMERIS` = 1;
+
+-- uzduotis 11
+
+SELECT `VARDAS` FROM `darbuotojai`
+WHERE `VARDAS` NOT LIKE 'J%';
+
+-- uzduotis 12
+
+SELECT `VARDAS`, `DIRBANUO`, `GIMIMOMETAI`
+FROM `darbuotojai`
+WHERE NOT `DIRBANUO` BETWEEN '2009-10-30' AND '2012-11-11';
+
+-- uzduotis 13
+
+SELECT `VARDAS`, `PAVARDE`, `GIMIMOMETAI`
+FROM `darbuotojai`
+ORDER BY `GIMIMOMETAI` ASC;
+
+-- uzduotis 14
+
+SELECT `VARDAS`, `PAVARDE`, `GIMIMOMETAI`
+FROM `darbuotojai`
+ORDER BY `GIMIMOMETAI` DESC;
+
+-- uzduotis 15
+
+SELECT MIN(`PROJEKTONUMERIS`), MAX(`PROJEKTONUMERIS`)
+FROM `darbuotojai`;
+
+-- uzduotis 16
+
+SELECT `PROJEKTONUMERIS`, COUNT(*)
+FROM `darbuotojai`
+GROUP BY `PROJEKTONUMERIS`;
+
+-- uzduotis 17
+
+SELECT `PROJEKTONUMERIS`, `PAREIGOS`, COUNT(*)
+FROM `darbuotojai`
+WHERE `PAREIGOS` = 'Programuotojas'
+GROUP BY `PROJEKTONUMERIS`;
+
+-- uzduotis 18
+
+SELECT `PROJEKTONUMERIS`, `PAREIGOS`, COUNT(*)
+FROM `darbuotojai`
+WHERE `PAREIGOS` = 'Programuotojas'
+GROUP BY `PROJEKTONUMERIS`
+HAVING COUNT(*) > 2;

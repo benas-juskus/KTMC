@@ -132,13 +132,6 @@ nav a::after {
     text-wrap: nowrap;
 }
 
-#phone:hover #phone-number,
-#email:hover #email-address,
-#linkedin:hover #linkedin-address,
-#github:hover #github-address {
-    visibility: visible;
-}
-
 /* MAIN SECTION */
 
 main {
