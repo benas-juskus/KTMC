@@ -13,7 +13,7 @@ USE `lietuvos_bankas` ;
 DROP TABLE IF EXISTS `lietuvos_bankas`.`asmuo` ;
 
 CREATE TABLE IF NOT EXISTS `lietuvos_bankas`.`asmuo` (
-  `id` INT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT, 
   `vardas` VARCHAR(45) NULL,
   `pavarde` VARCHAR(45) NULL,
   `tel` INT NULL,

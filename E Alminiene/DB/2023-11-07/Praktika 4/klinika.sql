@@ -56,3 +56,11 @@ CREATE TABLE IF NOT EXISTS `klinika`.`vizitas` (
     FOREIGN KEY(`paciento_id`) REFERENCES `pacientas`(`id`),
     FOREIGN KEY(`specialisto_id`) REFERENCES `specialistas`(`id`)
 );
+
+INSERT INTO `kainos` (`paslauga`, `kaina`) VALUES ('skiepai', 50.00);
+INSERT INTO `kainos` (`paslauga`, `kaina`) VALUES ('nukirmijimas', 35.00);
+INSERT INTO `pacientas` (`vardas`, `pavadinimas`, `veisle`, `gime`) VALUES ('rudis', 'suo', 'taksas', '2015-11-23');
+INSERT INTO `seimininkas` (`id`, `vardas`, `pavarde`, `adresas`, `tel`) VALUES (1, 'Tomas', 'Tomaitis', 'Gelvonu g. 20', 8686986);
+UPDATE `pacientas`
+SET `seimininko_id` = 1
+WHERE `id` = 1;
