@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `kurinys` (
     `tipas` TINYINT NULL,
     `autoriaus_id` INT NOT NULL,
     `isleidimo_data` DATE NULL,
+    `yra_sandelyje` INT NULL,
     `parduodama` BOOLEAN DEFAULT false,
     `kaina` INT(255) NULL,
     PRIMARY KEY (`id`),
@@ -56,6 +57,17 @@ CREATE TABLE IF NOT EXISTS `kuriniu_rinkinys` (
     UNIQUE (`pavadinimas`)
 );
 
+DROP TABLE IF EXISTS `kritikos_kurinys`;
+
+CREATE TABLE IF NOT EXISTS `kritikos_kurinys` (
+    `kritikos_id` INT NOT NULL AUTO_INCREMENT,
+    `pavadinimas`VARCHAR(255) NOT NULL,
+    `susijes_kurinys` INT NOT NULL,
+    `parduodama` BOOLEAN DEFAULT false,
+    `kaina` INT(255) NULL,
+    PRIMARY KEY (`kritikos_id`),
+    FOREIGN KEY (`susijes_kurinys`) REFERENCES `kurinys`(`id`)
+);
 
 DROP TABLE IF EXISTS `krepselis`;
 
@@ -67,4 +79,15 @@ CREATE TABLE IF NOT EXISTS `krepselis` (
     `suma` INT NULL,
     PRIMARY KEY (`session_id`),
     FOREIGN KEY (`vartotojo_id`) REFERENCES `vartotojas`(`id`)
+);
+
+DROP TABLE IF EXISTS `prekes_krepselyje`;
+
+CREATE TABLE IF NOT EXISTS `prekes_krepselyje` (
+    `session` INT NOT NULL,
+    `prekes_id` INT NOT NULL,
+    `kiekis` INT NOT NULL,
+    PRIMARY KEY (`session`),
+    FOREIGN KEY (`session`) REFERENCES `krepselis`(`session_id`),
+    FOREIGN KEY (`prekes_id`) REFERENCES `kurinys`(`id`)
 );
