@@ -50,7 +50,7 @@ INSERT INTO pirk VALUES
 ('000016', 'American Business Suppl', 'Daniels', 'George', '5601 Grande Ave.', 'Los Angeles', 'CA', '90233'), 
 ('000017', 'Black''s Furniture Store', 'Jackson', 'Dennis', '7010 Balcom Ave.', 'San Francisco', 'CA', '94119'),
 ('000018', 'Interior Systems', 'Goetz', 'John', '899 KenWood st.', 'Milwaukee', 'WI', '53201'), 
-('000019', 'The Designer', 'Hobbs', 'Luke', '6043 Whiteside Blvd.', 'New York', 'NY', '10713'), 
+('000015', 'The Designer', 'Hobbs', 'Luke', '6043 Whiteside Blvd.', 'New York', 'NY', '10713'), 
 ('000022', 'Las Vegas Furniture', 'Hart', 'Paul', '8301 Sale st.', 'Las Vegas', 'NV', '89106'), 
 ('000024', 'Baker Furniture', 'Campbell', 'Liada', '6700 Tyler st.', 'Pheonix', 'AZ', '85012'), 
 ('000025', 'Modern Furniture store', 'Hamilton', 'Robert', '366 Shirley Ave.', 'Pheonix', 'AZ', '85004'), 
@@ -59,7 +59,7 @@ INSERT INTO pirk VALUES
 ('000031', 'Al''s Furniture & Suppli', 'Thomson', 'Kathy', '80555 Brentwood', 'St. Louis', 'MC', '63121'), 
 ('000032', 'Contemporary Designs', 'Trujillo', 'Michelle', '5670 Colorado Blvd.', 'Milwaukee', 'WI', '53220'), 
 ('000033', 'Interior Designs', 'Long', 'Chuck', '40677 Misty Isle DR.', 'White Plains', 'NY', '10605'), 
-('000034', 'Le Clenega Furniture', 'Keega', 'Marilyn', '6045 Vineland Blvd.', 'Los Anegeles', 'CA', '89108'), 
+('000034', 'Le Clenega Furniture', 'Keega', 'Marilyn', '6045 Vineland Blvd.', 'Los Angeles', 'CA', '89108'), 
 ('000035', 'Valley Furniture', 'Yanish', 'Diane', '10111 Ventura Blvd.', 'Encino', 'CA', '91316'), 
 ('000036', 'New Horizon', 'Brendona', 'Kelly', '12508 Robin Hood ln.', 'Chicago', 'IL', '60619'), 
 ('000040', 'Designs Center Interiors', 'Gilber', 'Chuck', '7619 Kraft Dr.', 'Las Vegas', 'NV', '89106'), 
@@ -93,7 +93,7 @@ INSERT INTO pard VALUES
 ("020012","1987-09-22","000008","000027",100), 
 ("020013","1987-09-23","000012","000036",1050), 
 ("020014","1987-09-23","000001","000001",1800), 
-("020015","1987-09-23","000015","000019",746), 
+("020015","1987-09-23","000001","000019",746), 
 ("020016","1987-09-23","000015","000011",2358), 
 ("020017","1987-09-24","000006","000032",2400), 
 ("020018","1987-09-24","000011","000038",1500), 
@@ -104,4 +104,4 @@ INSERT INTO pard VALUES
 ("020023","1987-09-25","000003","000040",112), 
 ("020024","1987-09-25","000012","000045",489), 
 ("020025","1987-09-25","000003","000019",2010), 
-("020026","1987-09-25","000004","000017",1256);
+("020026","1987-09-25","000011","000019",1256);

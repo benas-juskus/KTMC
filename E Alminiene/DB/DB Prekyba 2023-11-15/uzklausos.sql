@@ -28,4 +28,33 @@ SELECT vardas, pavarde
 FROM pirk
 WHERE valstija = 'CA';
 
--- 6. ?????????
+-- 6.
+
+SELECT DISTINCT valstija
+FROM pirk;
+
+-- 7.
+
+SELECT pirk.vardas, pirk.pavarde, makl.vardas
+FROM pard
+JOIN pirk ON pirk.pirk_nr = pard.pirkejas
+JOIN makl ON pard.makleris = makl.makl_nr
+WHERE makl.vardas = 'Chuck';
+
+-- 8.
+
+SELECT DISTINCT miestas, valstija
+FROM pirk
+GROUP BY miestas;
+
+-- 9.
+
+SELECT vardas, pavarde
+FROM pirk
+WHERE miestas = 'Los Angeles';
+
+-- 10.
+
+SELECT vadovas, COUNT(makl_nr) AS makleriai
+FROM makl
+GROUP BY vadovas;
