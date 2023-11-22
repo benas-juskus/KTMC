@@ -4,41 +4,6 @@ CREATE SCHEMA IF NOT EXISTS studentai;
 
 USE studentai;
 
-DROP TABLE IF EXISTS studentas;
-
-CREATE TABLE IF NOT EXISTS studentas (
-    bilieto_nr INT NOT NULL AUTO_INCREMENT,
-    pavarde VARCHAR(45) NOT NULL,
-    gime DATE NOT NULL,
-    grupe VARCHAR(10) NOT NULL,
-    adresas VARCHAR(255) NOT NULL,
-    istojimo_balas INT(99) NULL,
-    PRIMARY KEY (bilieto_nr)
-);
-
-INSERT INTO studentas (bilieto_nr, pavarde, gime, grupe, adresas, istojimo_balas) 
-VALUES 
-(3, 'Petraitis P.', '1985-05-05', 'IF-8/1', 'Miglės 12-4, Vilnius', 16),
-(10, 'Povilaitytė P.', '1984-02-03', 'VF-6/1', 'Naglio 4, Klaipėda', 20),
-(15, 'Jonaitis G.', '1985-06-05', 'GF-7/2', 'Baltijos 12-14, Klaipėda', 17),
-(17, 'Simonaitis K.', '1984-01-03', 'IF-8/1', 'Pergalės 47, Šakiai', 15),
-(4, 'Mataitis N.', '1985-05-01', 'GF-7/2', 'Kalnų 15-19, Šilutė', 18),
-(9, 'Jonaitytė O.', '1984-02-10', 'VF-6/2', 'Žaliakalnio 32-4, Kaunas', 20),
-(18, 'Masiulis G.', '1985-07-13', 'GF-7/2', 'Laisvės 5-19, Kaunas', 28),
-(25, 'Masiulytė E.', '1985-06-17', 'IF-8/2', 'Antakalnio 3-2, Vilnius', 20),
-(20, 'Drakšas G.', '1985-04-10', 'GF-7/1', 'Žirmūnų 7-24, Vilnius', 27),
-(16, 'Graikšaitė D.', '1984-10-11', 'IF-8/2', 'Pašilaičių 19-119, Vilnius', 15),
-(14, 'Drakšaitė Z.', '1984-12-01', 'VF-6/1', 'Kęstučio 34-79, Vilnius', 25),
-(6, 'Narbutas E.', '1985-11-07', 'GF-7/1', 'Upytės 7, Tauragė', 16),
-(8, 'Račkus J.', '1984-02-02', 'IF-8/1', 'Siguldos19, Jurbarkas', 27),
-(11, 'Jazbutytė D.', '1985-03-09', 'VF-6/2', 'Nemuno 20, Tauragė', 17),
-(13, 'Petraitytė A.', '1984-09-10', 'GF-7/1', 'Minijos 113-115, Klaipėda', 25),
-(19, 'Jakaitytė E.', '1984-12-15', 'IF-8/2', 'Naikupės 5-19, Klaipėda', 26),
-(21, 'Normantas K.', '1985-08-24', 'VF-6/1', 'Zarasų 21-47, Zarasai', 20),
-(2, 'Zakaras M.', '1985-07-07', 'VF-6/2', 'Pašilės 8, Šilutė', 19),
-(5, 'Varnaitė G.', '1985-08-29', 'VF-6/1', 'Teatro a. 3-7, Šilutė', 19),
-(7, 'Viršilas A.', '1985-11-30', 'IF-8/2', 'Varpo 113-9, Klaipėda', 28);
-
 DROP TABLE IF EXISTS fakultetas;
 
 CREATE TABLE IF NOT EXISTS fakultetas (
@@ -52,6 +17,63 @@ INSERT INTO fakultetas (kodas, pavadinimas) VALUES
 ('IF', 'Informatikos'),
 ('VF', 'Vadybos'),
 ('GF', 'Gamtos');
+
+DROP TABLE IF EXISTS grupe;
+
+CREATE TABLE IF NOT EXISTS grupe (
+    numeris VARCHAR(10) NOT NULL,
+    fakultetas VARCHAR(10) NOT NULL,
+    PRIMARY KEY (numeris),
+    FOREIGN KEY (fakultetas) REFERENCES fakultetas(kodas)
+);
+
+INSERT INTO grupe (numeris, fakultetas) VALUES
+('7/1', 'GF'),
+('7/2', 'GF'),
+('8/1', 'IF'),
+('8/2', 'IF'),
+('6/1', 'VF'),
+('6/2', 'VF');
+
+
+DROP TABLE IF EXISTS studentas;
+
+CREATE TABLE IF NOT EXISTS studentas (
+    bilieto_nr INT NOT NULL AUTO_INCREMENT,
+    pavarde VARCHAR(45) NOT NULL,
+    gime DATE NOT NULL,
+    fakultetas VARCHAR(10) NOT NULL,
+    grupes_nr VARCHAR(10) NOT NULL,
+    adresas VARCHAR(255) NOT NULL,
+    istojimo_balas INT(99) NULL,
+    PRIMARY KEY (bilieto_nr),
+    FOREIGN KEY (fakultetas) REFERENCES fakultetas(kodas),
+    FOREIGN KEY (grupes_nr) REFERENCES grupe(numeris)
+);
+
+INSERT INTO studentas (bilieto_nr, pavarde, gime, fakultetas, grupes_nr, adresas, istojimo_balas) 
+VALUES 
+(3, 'Petraitis P.', '1985-05-05', 'IF', '8/1', 'Miglės 12-4, Vilnius', 16),
+(10, 'Povilaitytė P.', '1984-02-03', 'VF', '6/1', 'Naglio 4, Klaipėda', 20),
+(15, 'Jonaitis G.', '1985-06-05', 'GF', '7/2', 'Baltijos 12-14, Klaipėda', 17),
+(17, 'Simonaitis K.', '1984-01-03', 'IF', '8/1', 'Pergalės 47, Šakiai', 15),
+(4, 'Mataitis N.', '1985-05-01', 'GF', '7/2', 'Kalnų 15-19, Šilutė', 18),
+(9, 'Jonaitytė O.', '1984-02-10', 'VF', '6/2', 'Žaliakalnio 32-4, Kaunas', 20),
+(18, 'Masiulis G.', '1985-07-13', 'GF', '7/2', 'Laisvės 5-19, Kaunas', 28),
+(25, 'Masiulytė E.', '1985-06-17', 'IF', '8/2', 'Antakalnio 3-2, Vilnius', 20),
+(20, 'Drakšas G.', '1985-04-10', 'GF', '7/1', 'Žirmūnų 7-24, Vilnius', 27),
+(16, 'Graikšaitė D.', '1984-10-11', 'IF', '8/2', 'Pašilaičių 19-119, Vilnius', 15),
+(14, 'Drakšaitė Z.', '1984-12-01', 'VF', '6/1', 'Kęstučio 34-79, Vilnius', 25),
+(6, 'Narbutas E.', '1985-11-07', 'GF', '7/1', 'Upytės 7, Tauragė', 16),
+(8, 'Račkus J.', '1984-02-02', 'IF', '8/1', 'Siguldos19, Jurbarkas', 27),
+(11, 'Jazbutytė D.', '1985-03-09', 'VF', '6/2', 'Nemuno 20, Tauragė', 17),
+(13, 'Petraitytė A.', '1984-09-10', 'GF', '7/1', 'Minijos 113-115, Klaipėda', 25),
+(19, 'Jakaitytė E.', '1984-12-15', 'IF', '8/2', 'Naikupės 5-19, Klaipėda', 26),
+(21, 'Normantas K.', '1985-08-24', 'VF', '6/1', 'Zarasų 21-47, Zarasai', 20),
+(2, 'Zakaras M.', '1985-07-07', 'VF', '6/2', 'Pašilės 8, Šilutė', 19),
+(5, 'Varnaitė G.', '1985-08-29', 'VF', '6/1', 'Teatro a. 3-7, Šilutė', 19),
+(7, 'Viršilas A.', '1985-11-30', 'IF', '8/2', 'Varpo 113-9, Klaipėda', 28);
+
 
 DROP TABLE IF EXISTS disciplina;
 
