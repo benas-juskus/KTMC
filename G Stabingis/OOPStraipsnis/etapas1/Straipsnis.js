@@ -7,6 +7,11 @@ export class Straipsnis {
         this.tekstas = tekstas;
     };
 
+    /**
+     * Šis metodas naudoja informaciją pateiktą per konstruktorių ir generuoja elementus informacijos atvaizdavimui.
+     * Į elementus įsegama atitinkama paduota informacija.
+     * @param {html elementas} destination nurodome elementą, į kurį bus įsegama straipsnio informacija.
+     */
     generuotiStrapsni(destination) {
         let postName = document.createElement('small');
         postName.textContent = this.pavadinimas;

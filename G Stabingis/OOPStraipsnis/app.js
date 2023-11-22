@@ -1,4 +1,4 @@
-import {Straipsnis} from './etapas1/Straipsnis.js';
+import { Straipsnis } from './etapas1/Straipsnis.js';
 import { multiplePosts } from './etapas2/straipsniai.js';
 import { StraipsnisRubrika } from './etapas3/StraipsnisRubrika.js';
 
@@ -38,6 +38,7 @@ for (let post of multiplePosts) {
 let etapas3 = document.getElementById('etapas3');
 
 let rubrikaContent = {
+    id: 1,
     rubrika_name: 'Rubrikos pavadinimas',
     image: 'https://s1.15min.lt/static/cache/OTcweDU4MCw3MTB4NDIxLDYxNjE4OSxvcmlnaW5hbCwsaWQ9NTc0MjQ1NiZkYXRlPTIwMjElMkYwMSUyRjA4LDI1ODgzMTg3Mg==/klaipedos-universitetas-5ff8253a6de66.jpg',
     post_header: 'This, is the most amazing RUBRIKA header ever, dont even think of trying to find a better header.',
@@ -46,9 +47,10 @@ let rubrikaContent = {
 
 let newRubrika = new StraipsnisRubrika(
     rubrikaContent.rubrika_name,
-    rubrikaContent.image,
     rubrikaContent.post_header,
-    rubrikaContent.link
+    rubrikaContent.image,
+    rubrikaContent.link,
+    rubrikaContent.id
 );
 
 newRubrika.generuotiRubrika(etapas3);
