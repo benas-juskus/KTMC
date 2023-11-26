@@ -13,6 +13,13 @@ CREATE TABLE IF NOT EXISTS agentas (
     UNIQUE KEY (agento_vardas)
 );
 
+LOAD DATA INFILE "C:\\Users\\benas\\Desktop\\KTMC\\KTMC\\E Alminiene\\DB\\DB_NT\\agentai.csv"
+INTO TABLE agentas
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
 DROP TABLE IF EXISTS seniunija; 
 
 CREATE TABLE IF NOT EXISTS seniunija (
@@ -21,6 +28,13 @@ CREATE TABLE IF NOT EXISTS seniunija (
     PRIMARY KEY (id),
     UNIQUE KEY (pavadinimas)
 );
+
+LOAD DATA INFILE "C:\\Users\\benas\\Desktop\\KTMC\\KTMC\\E Alminiene\\DB\\DB_NT\\seniunijos.csv"
+INTO TABLE seniunija
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
 
 DROP TABLE IF EXISTS seniunijos_paskirstymas;
 
@@ -32,6 +46,13 @@ CREATE TABLE IF NOT EXISTS seniunijos_paskirstymas (
     FOREIGN KEY (seniunija_id) REFERENCES seniunija(id),
     FOREIGN KEY (agentas_id) REFERENCES agentas(id)
 );
+
+LOAD DATA INFILE "C:\\Users\\benas\\Desktop\\KTMC\\KTMC\\E Alminiene\\DB\\DB_NT\\seniunijos_paskirstymas.csv"
+INTO TABLE seniunijos_paskirstymas
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
 
 DROP TABLE IF EXISTS klientas;
 
@@ -45,6 +66,13 @@ CREATE TABLE IF NOT EXISTS klientas (
     PRIMARY KEY (id)
 );
 
+LOAD DATA INFILE "C:\\Users\\benas\\Desktop\\KTMC\\KTMC\\E Alminiene\\DB\\DB_NT\\klientai.csv"
+INTO TABLE klientas
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
 DROP TABLE IF EXISTS nt_tipas;
 
 CREATE TABLE IF NOT EXISTS nt_tipas (
@@ -53,6 +81,12 @@ CREATE TABLE IF NOT EXISTS nt_tipas (
     PRIMARY KEY (id),
     UNIQUE KEY (tipas)
 );
+
+INSERT INTO nt_tipas (tipas)
+VALUES
+('butas'),
+('namas'),
+('sklypas');
 
 DROP TABLE IF EXISTS nuosavybe;
 
@@ -72,17 +106,29 @@ CREATE TABLE IF NOT EXISTS nuosavybe (
     FOREIGN KEY (seniunija_id) REFERENCES seniunija(id)
 );
 
+LOAD DATA INFILE "C:\\Users\\benas\\Desktop\\KTMC\\KTMC\\E Alminiene\\DB\\DB_NT\\nuosavybes.csv"
+INTO TABLE nuosavybe
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
 DROP TABLE IF EXISTS pirkimas_pardavimas;
 
 CREATE TABLE IF NOT EXISTS pirkimas_pardavimas (
     sutarties_id INT NOT NULL AUTO_INCREMENT,
     agento_id INT NOT NULL,
     pirkejo_id INT NOT NULL,
-    pardavejo_id INT NOT NULL,
     nuosavybes_id INT NOT NULL,
     PRIMARY KEY (sutarties_id),
     FOREIGN KEY (agento_id) REFERENCES agentas(id),
     FOREIGN KEY (pirkejo_id) REFERENCES klientas(id),
-    FOREIGN KEY (pardavejo_id) REFERENCES klientas(id),
     FOREIGN KEY (nuosavybes_id) REFERENCES nuosavybe(id)
 );
+
+LOAD DATA INFILE "C:\\Users\\benas\\Desktop\\KTMC\\KTMC\\E Alminiene\\DB\\DB_NT\\sutartys.csv"
+INTO TABLE pirkimas_pardavimas
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
