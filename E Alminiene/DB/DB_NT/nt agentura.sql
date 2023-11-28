@@ -36,6 +36,9 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
+INSERT INTO seniunija (pavadinimas)
+VALUES ('Testinis');
+
 DROP TABLE IF EXISTS seniunijos_paskirstymas;
 
 CREATE TABLE IF NOT EXISTS seniunijos_paskirstymas (
@@ -120,6 +123,7 @@ CREATE TABLE IF NOT EXISTS pirkimas_pardavimas (
     agento_id INT NOT NULL,
     pirkejo_id INT NOT NULL,
     nuosavybes_id INT NOT NULL,
+    pardavimo_data DATE NOT NULL,
     PRIMARY KEY (sutarties_id),
     FOREIGN KEY (agento_id) REFERENCES agentas(id),
     FOREIGN KEY (pirkejo_id) REFERENCES klientas(id),

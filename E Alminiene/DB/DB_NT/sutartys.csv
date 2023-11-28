@@ -1,2 +1,6 @@
-sutarties_id,agento_id,pirkejo_id,nuosavybes_id
-,1,5,2
+sutarties_id,agento_id,pirkejo_id,nuosavybes_id,pardavimo_data
+,1,5,2,2020-02-15
+,3,2,3,2021-08-07
+124,3,3,4,2023-10-10
+,3,1,5,2022-03-07
+,2,4,1,2023-02-23
