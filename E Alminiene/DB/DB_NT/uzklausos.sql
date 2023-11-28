@@ -59,3 +59,10 @@ JOIN seniunija ON seniunija.id = nuosavybe.seniunija_id
 WHERE seniunija.pavadinimas LIKE '%Antakalnis%' 
 AND nuosavybe.kambariu_sk = 3
 AND nuosavybe.plotas < 100;
+
+
+-- Seniuniju paskirstymas:
+SELECT agentas.agento_vardas, seniunija.pavadinimas
+FROM seniunijos_paskirstymas
+JOIN seniunija ON seniunija.id = seniunijos_paskirstymas.seniunija_id
+JOIN agentas ON agentas.id = seniunijos_paskirstymas.agentas_id;
